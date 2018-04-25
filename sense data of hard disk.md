@@ -18,6 +18,48 @@ ACS-4 "7.32 REQUEST SENSE DATA EXT - 0Bh, Non-Data"
 
 ## 2 driver call trace
 
+### 2.2 list_for_each_entry_safe等链表操作总结
+### 2.1 sas_eh_defer_cmd和scsi_eh_finish_cmd的区别
+
+```
+222 static void sas_eh_finish_cmd(struct scsi_cmnd *cmd)
+223 {
+224         struct sas_ha_struct *sas_ha = SHOST_TO_SAS_HA(cmd->device->host);
+225         struct sas_task *task = TO_SAS_TASK(cmd);
+226
+227         /* At this point, we only get called following an actual abort
+228          * of the task, so we should be guaranteed not to be racing with
+229          * any completions from the LLD.  Task is freed after this.
+230          */
+231         sas_end_task(cmd, task);
+232
+233         /* now finish the command and move it on to the error
+234          * handler done list, this also takes it off the
+235          * error handler pending list.
+236          */
+237         scsi_eh_finish_cmd(cmd, &sas_ha->eh_done_q);
+238 }
+239
+240 static void sas_eh_defer_cmd(struct scsi_cmnd *cmd)
+241 {
+242         struct domain_device *dev = cmd_to_domain_dev(cmd);
+243         struct sas_ha_struct *ha = dev->port->ha;
+244         struct sas_task *task = TO_SAS_TASK(cmd);
+245
+246         if (!dev_is_sata(dev)) {
+247                 sas_eh_finish_cmd(cmd);
+248                 return;
+249         }
+250
+251         /* report the timeout to libata */
+252         sas_end_task(cmd, task);
+253         list_move_tail(&cmd->eh_entry, &ha->eh_ata_q);
+254 }
+```
+
+会执行scsi done
+scsi_eh_flush_done_q(&ha->eh_done_q);
+
 同一个任务不停的循环
 drivers/scsi/scsi_lib.c
 __scsi_queue_insert()  
@@ -64,11 +106,19 @@ ata_qc_complete or __ata_eh_qc_complete
 ata_eh_finish
 	ata_eh_qc_complete
 		__ata_eh_qc_complete
-#第一个是进入EH会
+#第一个是进入EH
 sas_ata_task_done //关键ap->pflags & ATA_PFLAG_FROZEN, or test_bit(SAS_HA_FROZEN, &sas_ha->state)
 	ata_qc_complete
 ata_scsi_qc_new
-		
+
+#
+scsi_dev_queue_ready //返回0
+
+queue_depth = BLK_MQ_MAX_DEPTH
+
+scsi_io_completion
+	__ratelimit  // 22 callbacks suppressed
+	
 ata_do_eh
 ata_eh_autopsy
 ata_eh_link_autopsy

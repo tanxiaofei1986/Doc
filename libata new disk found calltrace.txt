@@ -1,0 +1,157 @@
+ata_do_eh
+	ata_eh_autopsy
+		ata_eh_link_autopsy //被ATA_EHI_NO_AUTOPSY挡住， 什么都没做，直接返回了	
+	ata_eh_recover
+		__ata_port_freeze
+		__ata_port_freeze
+		sas_ata_hard_reset sas_ata.c
+		ata_eh_thaw_port
+		ata_std_postreset //没干什么
+		ata_eh_revalidate_and_attach
+			ata_dev_read_id
+				ata_do_dev_read_id
+					ata_exec_internal
+						ata_exec_internal_sg
+							ata_qc_issue
+								ata_sg_setup
+							ata_qc_complete
+								__ata_qc_complete
+									ata_sg_clean
+							ata_sff_flush_pio_task
+			ata_dev_configure
+				ata_exec_internal
+					ata_exec_internal_sg
+						ata_sff_flush_pio_task
+				ata_id_xfermask //没下发io
+				ata_dump_id
+				ata_dev_config_ncq
+					if ((ap->flags & ATA_FLAG_FPDMA_AUX)) {
+						/*ACS-4 IDENTIFY DEVICE*/
+						/* id[77].bit6 */
+						if (ata_id_has_ncq_send_and_recv(dev->id))
+							ata_dev_config_ncq_send_recv(dev);
+						/* id[77].bit5 */
+						if (ata_id_has_ncq_non_data(dev->id))
+							ata_dev_config_ncq_non_data(dev);
+								ata_log_supported
+									ata_read_log_page(dev, ATA_LOG_DIRECTORY, 0, ap->sector_buf, 1)
+								ata_read_log_page(dev, ATA_LOG_NCQ_NON_DATA, 0, ap->sector_buf, 1)
+						if (ata_id_has_ncq_prio(dev->id)) //id[76].bit12
+							/* 不知道ATA_DFLAG_NCQ_PRIO_ENABLE使能的位置，但默认是没使能的(dev->flags=0x1b) */
+							ata_dev_config_ncq_prio(dev);
+					}
+				if (ata_id_has_devslp(dev->id))
+					ata_read_log_page //有时候没执行，如果执行会有打印
+		ata_set_mode
+			ata_do_set_mode
+				ata_dev_set_mode
+					ata_dev_set_xfermode
+ata_read_native_max_address
+ata_dev_init_params /
+ata_dev_set_feature /
+ata_dev_set_xfermode /
+ata_read_log_page /
+ata_do_dev_read_id
+ata_set_max_sectors
+
+NCQ QUEUE MANAGEMENT COMMAND SUPPORTED, 则ATA_LOG_NCQ_NON_DATA就支持
+NCQ FEATURE SET SUPPORTED被设置为0， 则NCQ QUEUE MANAGEMENT COMMAND SUPPORTED也要被清除为0
+
+
+#define ata_msg_probe(p)  ((p)->msg_enable & ATA_MSG_PROBE)
+#define ata_id_has_devslp(id)	((id)[ATA_ID_FEATURE_SUPP] & (1 << 8))
+ATA_ID_SATA_CAPABILITY等于76
+ATA_ID_SATA_CAPABILITY_2等于77
+ATA_ID_FEATURE_SUPP等于78
+struct ata_device {
+	...
+	union {
+		u16		id[ATA_ID_WORDS]; /* IDENTIFY xxx DEVICE data */
+		u32		gscr[SATA_PMP_GSCR_DWORDS]; /* PMP GSCR block */
+	} ____cacheline_aligned;
+	...
+};
+这个id是ata_dev_read_id()读到的。ATA_CMD_ID_ATA/ATA_CMD_ID_ATAPI, 0xEC/0xA1
+git show 65fe1f0f6
+ATA_DFLAG_DEVSLP
+调用的ata_read_log_page的地方有：
+ata_dev_configure
+ata_dev_config_trusted
+ata_dev_config_zac
+ata_dev_config_ncq_prio
+ata_dev_config_ncq_non_data
+ata_dev_config_ncq_send_recv
+ata_identify_page_supported
+ata_log_supported
+
+ 337         /* READ_LOG_EXT pages */                                                
+ 338         ATA_LOG_DIRECTORY       = 0x0,                                                                                                                                                                                                 
+ 339         ATA_LOG_SATA_NCQ        = 0x10,                                         
+ 340         ATA_LOG_NCQ_NON_DATA    = 0x12,                                         
+ 341         ATA_LOG_NCQ_SEND_RECV   = 0x13,                                         
+ 342         ATA_LOG_IDENTIFY_DEVICE = 0x30
+ 
+static int ata_dev_config_ncq(struct ata_device *dev,
+			       char *desc, size_t desc_sz)
+{
+	...
+	if ((ap->flags & ATA_FLAG_FPDMA_AUX)) {
+		if (ata_id_has_ncq_send_and_recv(dev->id))
+			ata_dev_config_ncq_send_recv(dev);
+		if (ata_id_has_ncq_non_data(dev->id))
+			ata_dev_config_ncq_non_data(dev);
+		if (ata_id_has_ncq_prio(dev->id))
+			ata_dev_config_ncq_prio(dev);
+	}
+
+	return 0;
+}
+
+libata-core.c接口
+ata_std_postreset(), 注册到.postreset
+	
+[    7.142978] sas: ata1: end_device-0:0:3: dev error handler
+[    7.142987] ata_eh_link_autopsy: ENTER
+[    7.142993] ata_eh_recover: ENTER
+[    7.143004] __ata_port_freeze: ata1 port frozen
+[    7.143009] sas: ata1: end_device-0:0:3: Unable to reset ata device?
+[    7.299935] ata_eh_thaw_port: ata1 port thawed
+[    7.299939] ata_std_postreset: ENTER
+[    7.299942] ata_std_postreset: EXIT
+[    7.299947] ata_eh_revalidate_and_attach: ENTER
+[    7.299953] ata1.00: ata_dev_read_id: ENTER
+[    7.299958] ata_sg_setup: ENTER, ata1
+[    7.300046] ata_sg_setup: 1 sg elements mapped
+[    7.301498] ata_sg_clean: unmapping 1 sg elements
+[    7.301520] ata_sff_flush_pio_task: ENTER
+[    7.301527] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301534] ata1.00: ata_dev_configure: ENTER
+[    7.301666] ata_sff_flush_pio_task: ENTER
+[    7.301670] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301675] ata1.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.301678] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.301681] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.301684] ata_dump_id: 88==0x407f  93==0x0000
+[    7.301691] ata1.00: ATA-8: HGST HUS724040ALA640, MFAOA8B0, max UDMA/133
+[    7.301694] ata1.00: 7814037168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[    7.301702] ata_dev_set_xfermode: set features - xfer mode
+[    7.301819] ata_sff_flush_pio_task: ENTER
+[    7.301823] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301826] ata_dev_set_xfermode: EXIT, err_mask=0
+[    7.301829] ata1.00: ata_dev_read_id: ENTER
+[    7.301831] ata_sg_setup: ENTER, ata1
+[    7.301838] ata_sg_setup: 1 sg elements mapped
+[    7.303324] ata_sg_clean: unmapping 1 sg elements
+[    7.303346] ata_sff_flush_pio_task: ENTER
+[    7.303351] ata1: ata_sff_flush_pio_task: EXIT
+[    7.303356] ata1.00: ata_dev_configure: ENTER
+[    7.303472] ata_sff_flush_pio_task: ENTER
+[    7.303476] ata1: ata_sff_flush_pio_task: EXIT
+[    7.303480] ata1.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.303482] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.303485] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.303487] ata_dump_id: 88==0x407f  93==0x0000
+[    7.303492] ata_dev_set_mode: xfer_shift=12, xfer_mode=0x46
+[    7.303495] ata1.00: configured for UDMA/133
+[    7.303499] ata_eh_recover: EXIT, rc=0
+[    7.303626] sas: --- Exit sas_scsi_recover_host: busy: 0 failed: 0 tries: 1

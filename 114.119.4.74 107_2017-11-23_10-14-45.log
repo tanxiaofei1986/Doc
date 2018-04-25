@@ -1,0 +1,1493 @@
+estuary:/$ 
+estuary:/$ dmesg 
+[    0.000000] Booting Linux on physical CPU 0x10000
+[    0.000000] Linux version 4.14.0-rc5-g5dded5e-dirty (tanxiaofei@EstBuildSvr1) (gcc version 4.9.2 20140904 (prerelease) (crosstool-NG linaro-1.13.1-4.9-2014.09 - Linaro GCC 4.9-2014.09)) #353 SMP PREEMPT Thu Nov 23 10:28:04 CST 2017
+[    0.000000] Boot CPU: AArch64 Processor [410fd082]
+[    0.000000] Machine model: Hisilicon PhosphorV660 Development Board
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: EFI v2.60 by EDK II
+[    0.000000] efi:  SMBIOS=0x3f040000  SMBIOS 3.0=0x39af0000  ACPI=0x39bc0000  ACPI 2.0=0x39bc0014  MEMATTR=0x3cc71018 
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x0000000039BC0014 000024 (v02 HISI  )
+[    0.000000] ACPI: XSDT 0x0000000039BB00E8 00007C (v01 HISI   HIP07    00000000      01000013)
+[    0.000000] ACPI: FACP 0x0000000039A70000 00010C (v05 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: DSDT 0x0000000039A30000 007DD2 (v02 HISI   HIP07    00000000 INTL 20170728)
+[    0.000000] ACPI: MCFG 0x0000000039AD0000 0000AC (v01 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: SLIT 0x0000000039AC0000 00003C (v01 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: SPCR 0x0000000039AB0000 000050 (v02 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: SRAT 0x0000000039AA0000 0005B0 (v03 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: DBG2 0x0000000039A90000 00005A (v00 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: GTDT 0x0000000039A60000 000098 (v02 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: APIC 0x0000000039A50000 0013E4 (v01 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: IORT 0x0000000039A40000 00080C (v00 HISI   HIP07    00000000 INTL 20170728)
+[    0.000000] ACPI: PPTT 0x00000000318C0000 001744 (v01 HISI   HIP07    00000000 INTL 20151124)
+[    0.000000] ACPI: iBFT 0x00000000317D0000 000800 (v01 HISI   HIP07    00000000      00000000)
+[    0.000000] ACPI: SPCR: console: pl011,mmio32,0x602b0000,115200
+[    0.000000] early_memtest: # of tests: 1
+[    0.000000]   0x0000000000000000 - 0x0000000000080000 pattern 0000000000000000
+[    0.000000]   0x00000000013c9000 - 0x000000002e547000 pattern 0000000000000000
+[    0.000000]   0x000000002fc00000 - 0x00000000317d0000 pattern 0000000000000000
+[    0.000000]   0x00000000317e0000 - 0x00000000317e1000 pattern 0000000000000000
+[    0.000000]   0x00000000317e2000 - 0x00000000318c0000 pattern 0000000000000000
+[    0.000000]   0x00000000318d0000 - 0x00000000318db000 pattern 0000000000000000
+[    0.000000]   0x00000000318df000 - 0x0000000039980000 pattern 0000000000000000
+[    0.000000]   0x000000003a050000 - 0x000000003cc71018 pattern 0000000000000000
+[    0.000000]   0x000000003cc71748 - 0x000000003f040000 pattern 0000000000000000
+[    0.000000]   0x000000003f070000 - 0x000000003fc00000 pattern 0000000000000000
+[    0.000000]   0x0000001040000000 - 0x00000017fc000000 pattern 0000000000000000
+[    0.000000]   0x0000041000000000 - 0x0000041797c00000 pattern 0000000000000000
+[    0.000000]   0x0000041797e00000 - 0x00000417fbfed000 pattern 0000000000000000
+[    0.000000]   0x00000417fbfff000 - 0x00000417fc000000 pattern 0000000000000000
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10000 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10001 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10002 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10003 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10100 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10101 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10102 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10103 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10200 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10201 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10202 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10203 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10300 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10301 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10302 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 0 -> MPIDR 0x10303 -> Node 0
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30000 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30001 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30002 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30003 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30100 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30101 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30102 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30103 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30200 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30201 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30202 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30203 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30300 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30301 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30302 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 1 -> MPIDR 0x30303 -> Node 1
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50000 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50001 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50002 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50003 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50100 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50101 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50102 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50103 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50200 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50201 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50202 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50203 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50300 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50301 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50302 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 2 -> MPIDR 0x50303 -> Node 2
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70000 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70001 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70002 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70003 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70100 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70101 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70102 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70103 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70200 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70201 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70202 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70203 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70300 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70301 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70302 -> Node 3
+[    0.000000] ACPI: NUMA: SRAT: PXM 3 -> MPIDR 0x70303 -> Node 3
+[    0.000000] ACPI: SRAT: Node 1 PXM 1 [mem 0x00000000-0x3fffffff]
+[    0.000000] ACPI: SRAT: Node 1 PXM 1 [mem 0x1000000000-0x17ffffffff]
+[    0.000000] ACPI: SRAT: Node 3 PXM 3 [mem 0x40000000000-0x4003fffffff]
+[    0.000000] ACPI: SRAT: Node 3 PXM 3 [mem 0x41000000000-0x417ffffffff]
+[    0.000000] NUMA: Initmem setup node 0 [<memory-less node>]
+[    0.000000] NUMA: NODE_DATA [mem 0x17fbffea80-0x17fbffffff]
+[    0.000000] NUMA: NODE_DATA(0) on node 1
+[    0.000000] NUMA: NODE_DATA [mem 0x17fbffd500-0x17fbffea7f]
+[    0.000000] NUMA: Initmem setup node 2 [<memory-less node>]
+[    0.000000] NUMA: NODE_DATA [mem 0x417fbfeba80-0x417fbfecfff]
+[    0.000000] NUMA: NODE_DATA(2) on node 3
+[    0.000000] NUMA: NODE_DATA [mem 0x417fbfea500-0x417fbfeba7f]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x00000417fbffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   1: [mem 0x0000000000000000-0x00000000318dafff]
+[    0.000000]   node   1: [mem 0x00000000318db000-0x00000000318defff]
+[    0.000000]   node   1: [mem 0x00000000318df000-0x000000003997ffff]
+[    0.000000]   node   1: [mem 0x0000000039980000-0x0000000039a2ffff]
+[    0.000000]   node   1: [mem 0x0000000039a30000-0x0000000039a7ffff]
+[    0.000000]   node   1: [mem 0x0000000039a80000-0x0000000039a8ffff]
+[    0.000000]   node   1: [mem 0x0000000039a90000-0x0000000039adffff]
+[    0.000000]   node   1: [mem 0x0000000039ae0000-0x0000000039baffff]
+[    0.000000]   node   1: [mem 0x0000000039bb0000-0x0000000039bcffff]
+[    0.000000]   node   1: [mem 0x0000000039bd0000-0x000000003a04ffff]
+[    0.000000]   node   1: [mem 0x000000003a050000-0x000000003f03ffff]
+[    0.000000]   node   1: [mem 0x000000003f040000-0x000000003f06ffff]
+[    0.000000]   node   1: [mem 0x000000003f070000-0x000000003fbfffff]
+[    0.000000]   node   1: [mem 0x0000001040000000-0x00000017fbffffff]
+[    0.000000]   node   3: [mem 0x0000041000000000-0x00000417fbffffff]
+[    0.000000] Could not find start_pfn for node 0
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000000000000]
+[    0.000000] On node 0 totalpages: 0
+[    0.000000] Initmem setup node 1 [mem 0x0000000000000000-0x00000017fbffffff]
+[    0.000000] On node 1 totalpages: 8371200
+[    0.000000]   DMA zone: 4080 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 261120 pages, LIFO batch:31
+[    0.000000]   Normal zone: 126720 pages used for memmap
+[    0.000000]   Normal zone: 8110080 pages, LIFO batch:31
+[    0.000000] Could not find start_pfn for node 2
+[    0.000000] Initmem setup node 2 [mem 0x0000000000000000-0x0000000000000000]
+[    0.000000] On node 2 totalpages: 0
+[    0.000000] Initmem setup node 3 [mem 0x0000041000000000-0x00000417fbffffff]
+[    0.000000] On node 3 totalpages: 8372224
+[    0.000000]   Normal zone: 130816 pages used for memmap
+[    0.000000]   Normal zone: 8372224 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from ACPI.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 23 pages/cpu @ffff8017dbc90000 s56448 r8192 d29568 u94208
+[    0.000000] pcpu-alloc: s56448 r8192 d29568 u94208 alloc=23*4096
+[    0.000000] pcpu-alloc: [0] 00 [0] 01 [0] 02 [0] 03 [0] 04 [0] 05 [0] 06 [0] 07 
+[    0.000000] pcpu-alloc: [0] 08 [0] 09 [0] 10 [0] 11 [0] 12 [0] 13 [0] 14 [0] 15 
+[    0.000000] pcpu-alloc: [1] 16 [1] 17 [1] 18 [1] 19 [1] 20 [1] 21 [1] 22 [1] 23 
+[    0.000000] pcpu-alloc: [1] 24 [1] 25 [1] 26 [1] 27 [1] 28 [1] 29 [1] 30 [1] 31 
+[    0.000000] pcpu-alloc: [2] 32 [2] 33 [2] 34 [2] 35 [2] 36 [2] 37 [2] 38 [2] 39 
+[    0.000000] pcpu-alloc: [2] 40 [2] 41 [2] 42 [2] 43 [2] 44 [2] 45 [2] 46 [2] 47 
+[    0.000000] pcpu-alloc: [3] 48 [3] 49 [3] 50 [3] 51 [3] 52 [3] 53 [3] 54 [3] 55 
+[    0.000000] pcpu-alloc: [3] 56 [3] 57 [3] 58 [3] 59 [3] 60 [3] 61 [3] 62 [3] 63 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] Built 4 zonelists, mobility grouping on.  Total pages: 16481808
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/tanxiaofei/Image rdinit=/init acpi=force pcie_aspm=off memtest=1 crashkenel=256M32M console=ttyAMA0,115200 ip=dhcp
+[    0.000000] PCIe ASPM is disabled
+[    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] log_buf_len total cpu_extra contributions: 258048 bytes
+[    0.000000] log_buf_len min size: 131072 bytes
+[    0.000000] log_buf_len: 524288 bytes
+[    0.000000] early log buf free: 118588(90%)
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] software IO TLB [mem 0x35980000-0x39980000] (64MB) mapped at [ffff800035980000-ffff80003997ffff]
+[    0.000000] Memory: 65800196K/66973696K available (11580K kernel code, 1298K rwdata, 5020K rodata, 1152K init, 640K bss, 1173500K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008bd0000   ( 11584 KB)
+[    0.000000]     .rodata : 0xffff000008bd0000 - 0xffff0000090c0000   (  5056 KB)
+[    0.000000]       .init : 0xffff0000090c0000 - 0xffff0000091e0000   (  1152 KB)
+[    0.000000]       .data : 0xffff0000091e0000 - 0xffff000009324a00   (  1299 KB)
+[    0.000000]        .bss : 0xffff000009324a00 - 0xffff0000093c4a40   (   641 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fd000 - 0xffff7dfffec00000   (  4108 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e105ff00000   ( 67071 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff8417fc000000   (4292544 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=64, Nodes=4
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: VLPI support, direct LPI support
+[    0.000000] SRAT: PXM 0 -> ITS 0 -> Node 0
+[    0.000000] SRAT: PXM 0 -> ITS 1 -> Node 0
+[    0.000000] SRAT: PXM 0 -> ITS 2 -> Node 0
+[    0.000000] SRAT: PXM 1 -> ITS 3 -> Node 1
+[    0.000000] SRAT: PXM 2 -> ITS 4 -> Node 2
+[    0.000000] SRAT: PXM 2 -> ITS 5 -> Node 2
+[    0.000000] SRAT: PXM 2 -> ITS 6 -> Node 2
+[    0.000000] SRAT: PXM 3 -> ITS 7 -> Node 3
+[    0.000000] ITS [mem 0x4c000000-0x4c01ffff]
+[    0.000000] ITS@0x000000004c000000: Using ITS number 0
+[    0.000000] ITS@0x000000004c000000: allocated 524288 Devices @17db000000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x000000004c000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x000000004c000000: allocated 131072 Virtual CPUs @17dba00000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x000000004c000000: allocated 512 Interrupt Collections @17db93b000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x6c000000-0x6c01ffff]
+[    0.000000] ITS@0x000000006c000000: Using ITS number 1
+[    0.000000] ITS@0x000000006c000000: allocated 524288 Devices @17dac00000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x000000006c000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x000000006c000000: allocated 131072 Virtual CPUs @17dbb00000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x000000006c000000: allocated 512 Interrupt Collections @17db93d000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0xc6000000-0xc601ffff]
+[    0.000000] ITS@0x00000000c6000000: Using ITS number 2
+[    0.000000] ITS@0x00000000c6000000: allocated 524288 Devices @17da800000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x00000000c6000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x00000000c6000000: allocated 131072 Virtual CPUs @17da400000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x00000000c6000000: allocated 512 Interrupt Collections @17db93e000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x8c6000000-0x8c601ffff]
+[    0.000000] ITS@0x00000008c6000000: Using ITS number 3
+[    0.000000] ITS@0x00000008c6000000: allocated 524288 Devices @17da000000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x00000008c6000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x00000008c6000000: allocated 131072 Virtual CPUs @17da500000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x00000008c6000000: allocated 512 Interrupt Collections @17db980000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x4004c000000-0x4004c01ffff]
+[    0.000000] ITS@0x000004004c000000: Using ITS number 4
+[    0.000000] ITS@0x000004004c000000: allocated 524288 Devices @17d9c00000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x000004004c000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x000004004c000000: allocated 131072 Virtual CPUs @17da600000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x000004004c000000: allocated 512 Interrupt Collections @17db981000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x4006c000000-0x4006c01ffff]
+[    0.000000] ITS@0x000004006c000000: Using ITS number 5
+[    0.000000] ITS@0x000004006c000000: allocated 524288 Devices @17d9800000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x000004006c000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x000004006c000000: allocated 131072 Virtual CPUs @17da700000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x000004006c000000: allocated 512 Interrupt Collections @17db983000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x400c6000000-0x400c601ffff]
+[    0.000000] ITS@0x00000400c6000000: Using ITS number 6
+[    0.000000] ITS@0x00000400c6000000: allocated 524288 Devices @17d9400000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x00000400c6000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x00000400c6000000: allocated 131072 Virtual CPUs @17d9000000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x00000400c6000000: allocated 512 Interrupt Collections @17db984000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS [mem 0x408c6000000-0x408c601ffff]
+[    0.000000] ITS@0x00000408c6000000: Using ITS number 7
+[    0.000000] ITS@0x00000408c6000000: allocated 524288 Devices @17d8c00000 (flat, esz 8, psz 16K, shr 1)
+[    0.000000] ITS@0x00000408c6000000: Virtual CPUs too large, reduce ITS pages 1024->256
+[    0.000000] ITS@0x00000408c6000000: allocated 131072 Virtual CPUs @17d9100000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x00000408c6000000: allocated 512 Interrupt Collections @17db985000 (flat, esz 8, psz 4K, shr 1)
+[    0.000000] GIC: using LPI property table @0x00000017db9d0000
+[    0.000000] ITS: Allocated 1792 chunks for LPIs
+[    0.000000] ITS: Using DirectLPI for VPE invalidation
+[    0.000000] ITS: Enabling GICv4 support
+[    0.000000] GICv3: CPU0: found redistributor 10000 region 0:0x000000004d100000
+[    0.000000] CPU0: using LPI pending table @0x00000017db9e0000
+[    0.000000] arch_timer: Enabling global workaround for HiSilicon erratum 161010101
+[    0.000000] arch_timer: CPU0: Trapping CNTVCT access
+[    0.000000] arch_timer: cp15 timer(s) running at 50.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xb8812736b, max_idle_ns: 440795202655 ns
+[    0.000002] sched_clock: 56 bits at 50MHz, resolution 20ns, wraps every 4398046511100ns
+[    0.000198] Console: colour dummy device 80x25
+[    0.000259] mempolicy: Enabling automatic NUMA balancing. Configure with numa_balancing= or the kernel.numa_balancing sysctl
+[    0.000276] Calibrating delay loop (skipped), value calculated using timer frequency.. 100.00 BogoMIPS (lpj=200000)
+[    0.000281] pid_max: default: 65536 minimum: 512
+[    0.000301] ACPI: Core revision 20170728
+[    0.000343] ACPI BIOS Warning (bug): Incorrect checksum in table [DSDT] - 0x86, should be 0xE0 (20170728/tbprint-211)
+[    0.002841] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.002891] Security Framework initialized
+[    0.030759] Dentry cache hash table entries: 8388608 (order: 14, 67108864 bytes)
+[    0.045238] Inode-cache hash table entries: 4194304 (order: 13, 33554432 bytes)
+[    0.045723] Mount-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.046180] Mountpoint-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.064085] ASID allocator initialised with 65536 entries
+[    0.072076] Hierarchical SRCU implementation.
+[    0.080101] PCI/MSI: ITS@0x4c000000 domain created
+[    0.080108] PCI/MSI: ITS@0x6c000000 domain created
+[    0.080112] PCI/MSI: ITS@0xc6000000 domain created
+[    0.080116] PCI/MSI: ITS@0x8c6000000 domain created
+[    0.080119] PCI/MSI: ITS@0x4004c000000 domain created
+[    0.080123] PCI/MSI: ITS@0x4006c000000 domain created
+[    0.080127] PCI/MSI: ITS@0x400c6000000 domain created
+[    0.080130] PCI/MSI: ITS@0x408c6000000 domain created
+[    0.080175] Platform MSI: ITS@0x4c000000 domain created
+[    0.080179] Platform MSI: ITS@0x6c000000 domain created
+[    0.080183] Platform MSI: ITS@0xc6000000 domain created
+[    0.080186] Platform MSI: ITS@0x8c6000000 domain created
+[    0.080189] Platform MSI: ITS@0x4004c000000 domain created
+[    0.080193] Platform MSI: ITS@0x4006c000000 domain created
+[    0.080196] Platform MSI: ITS@0x400c6000000 domain created
+[    0.080200] Platform MSI: ITS@0x408c6000000 domain created
+[    0.080266] Remapping and enabling EFI services.
+[    0.080308]   EFI remap 0x0000000039980000 => 0000000020000000
+[    0.080336]   EFI remap 0x00000000399d0000 => 0000000020050000
+[    0.080346]   EFI remap 0x0000000039a20000 => 00000000200a0000
+[    0.080389]   EFI remap 0x0000000039ae0000 => 00000000200b0000
+[    0.080418]   EFI remap 0x0000000039b60000 => 0000000020130000
+[    0.080446]   EFI remap 0x0000000039bd0000 => 0000000020180000
+[    0.080477]   EFI remap 0x0000000039c20000 => 00000000201d0000
+[    0.080504]   EFI remap 0x0000000039c70000 => 0000000020220000
+[    0.080532]   EFI remap 0x0000000039cc0000 => 0000000020270000
+[    0.080560]   EFI remap 0x0000000039d10000 => 00000000202c0000
+[    0.080589]   EFI remap 0x0000000039d60000 => 0000000020310000
+[    0.080620]   EFI remap 0x0000000039db0000 => 0000000020360000
+[    0.080651]   EFI remap 0x0000000039e00000 => 00000000203b0000
+[    0.080691]   EFI remap 0x0000000039e50000 => 0000000020400000
+[    0.080718]   EFI remap 0x0000000039ec0000 => 0000000020470000
+[    0.080746]   EFI remap 0x0000000039f10000 => 00000000204c0000
+[    0.080775]   EFI remap 0x0000000039f60000 => 0000000020510000
+[    0.080803]   EFI remap 0x0000000039fb0000 => 0000000020560000
+[    0.080832]   EFI remap 0x000000003a000000 => 00000000205b0000
+[    0.080854]   EFI remap 0x000000003f040000 => 0000000020600000
+[    0.080863]   EFI remap 0x0000000078000000 => 0000000020630000
+[    0.080870]   EFI remap 0x00000000a4000000 => 0000000020800000
+[    0.080882]   EFI remap 0x00000000a6000000 => 0000000021800000
+[    0.080891]   EFI remap 0x00000000d00e0000 => 0000000021810000
+[    0.096100] smp: Bringing up secondary CPUs ...
+[    0.178716] Detected PIPT I-cache on CPU1
+[    0.178729] GICv3: CPU1: found redistributor 10001 region 1:0x000000004d140000
+[    0.178794] CPU1: using LPI pending table @0x00000417d8a90000
+[    0.178932] arch_timer: CPU1: Trapping CNTVCT access
+[    0.178936] CPU1: Booted secondary processor [410fd082]
+[    0.261346] Detected PIPT I-cache on CPU2
+[    0.261353] GICv3: CPU2: found redistributor 10002 region 2:0x000000004d180000
+[    0.261416] CPU2: using LPI pending table @0x00000417d8aa0000
+[    0.261537] arch_timer: CPU2: Trapping CNTVCT access
+[    0.261540] CPU2: Booted secondary processor [410fd082]
+[    0.343982] Detected PIPT I-cache on CPU3
+[    0.343989] GICv3: CPU3: found redistributor 10003 region 3:0x000000004d1c0000
+[    0.344052] CPU3: using LPI pending table @0x00000417d8ab0000
+[    0.344174] arch_timer: CPU3: Trapping CNTVCT access
+[    0.344177] CPU3: Booted secondary processor [410fd082]
+[    0.426620] Detected PIPT I-cache on CPU4
+[    0.426632] GICv3: CPU4: found redistributor 10100 region 4:0x000000004d200000
+[    0.426697] CPU4: using LPI pending table @0x00000417d8ac0000
+[    0.426822] arch_timer: CPU4: Trapping CNTVCT access
+[    0.426826] CPU4: Booted secondary processor [410fd082]
+[    0.509256] Detected PIPT I-cache on CPU5
+[    0.509264] GICv3: CPU5: found redistributor 10101 region 5:0x000000004d240000
+[    0.509326] CPU5: using LPI pending table @0x00000417d8ad0000
+[    0.509448] arch_timer: CPU5: Trapping CNTVCT access
+[    0.509451] CPU5: Booted secondary processor [410fd082]
+[    0.591894] Detected PIPT I-cache on CPU6
+[    0.591902] GICv3: CPU6: found redistributor 10102 region 6:0x000000004d280000
+[    0.591967] CPU6: using LPI pending table @0x00000417d8ae0000
+[    0.592088] arch_timer: CPU6: Trapping CNTVCT access
+[    0.592091] CPU6: Booted secondary processor [410fd082]
+[    0.674533] Detected PIPT I-cache on CPU7
+[    0.674542] GICv3: CPU7: found redistributor 10103 region 7:0x000000004d2c0000
+[    0.674605] CPU7: using LPI pending table @0x00000417d8af0000
+[    0.674728] arch_timer: CPU7: Trapping CNTVCT access
+[    0.674731] CPU7: Booted secondary processor [410fd082]
+[    0.757174] Detected PIPT I-cache on CPU8
+[    0.757186] GICv3: CPU8: found redistributor 10200 region 8:0x000000004d300000
+[    0.757252] CPU8: using LPI pending table @0x00000417d8b00000
+[    0.757377] arch_timer: CPU8: Trapping CNTVCT access
+[    0.757381] CPU8: Booted secondary processor [410fd082]
+[    0.839810] Detected PIPT I-cache on CPU9
+[    0.839818] GICv3: CPU9: found redistributor 10201 region 9:0x000000004d340000
+[    0.839883] CPU9: using LPI pending table @0x00000417d8b10000
+[    0.840005] arch_timer: CPU9: Trapping CNTVCT access
+[    0.840008] CPU9: Booted secondary processor [410fd082]
+[    0.922449] Detected PIPT I-cache on CPU10
+[    0.922458] GICv3: CPU10: found redistributor 10202 region 10:0x000000004d380000
+[    0.922523] CPU10: using LPI pending table @0x00000417d8b20000
+[    0.922646] arch_timer: CPU10: Trapping CNTVCT access
+[    0.922649] CPU10: Booted secondary processor [410fd082]
+[    1.005088] Detected PIPT I-cache on CPU11
+[    1.005097] GICv3: CPU11: found redistributor 10203 region 11:0x000000004d3c0000
+[    1.005159] CPU11: using LPI pending table @0x00000417d8b30000
+[    1.005280] arch_timer: CPU11: Trapping CNTVCT access
+[    1.005284] CPU11: Booted secondary processor [410fd082]
+[    1.087730] Detected PIPT I-cache on CPU12
+[    1.087743] GICv3: CPU12: found redistributor 10300 region 12:0x000000004d400000
+[    1.087809] CPU12: using LPI pending table @0x00000417d8b40000
+[    1.087934] arch_timer: CPU12: Trapping CNTVCT access
+[    1.087938] CPU12: Booted secondary processor [410fd082]
+[    1.170367] Detected PIPT I-cache on CPU13
+[    1.170377] GICv3: CPU13: found redistributor 10301 region 13:0x000000004d440000
+[    1.170440] CPU13: using LPI pending table @0x00000417d8b50000
+[    1.170561] arch_timer: CPU13: Trapping CNTVCT access
+[    1.170564] CPU13: Booted secondary processor [410fd082]
+[    1.253007] Detected PIPT I-cache on CPU14
+[    1.253017] GICv3: CPU14: found redistributor 10302 region 14:0x000000004d480000
+[    1.253079] CPU14: using LPI pending table @0x00000417d8b60000
+[    1.253201] arch_timer: CPU14: Trapping CNTVCT access
+[    1.253205] CPU14: Booted secondary processor [410fd082]
+[    1.335646] Detected PIPT I-cache on CPU15
+[    1.335655] GICv3: CPU15: found redistributor 10303 region 15:0x000000004d4c0000
+[    1.335717] CPU15: using LPI pending table @0x00000417d8b70000
+[    1.335839] arch_timer: CPU15: Trapping CNTVCT access
+[    1.335843] CPU15: Booted secondary processor [410fd082]
+[    1.417938] Detected PIPT I-cache on CPU16
+[    1.417951] GICv3: CPU16: found redistributor 30000 region 16:0x000000006d100000
+[    1.418018] CPU16: using LPI pending table @0x00000417d8b80000
+[    1.418144] arch_timer: CPU16: Trapping CNTVCT access
+[    1.418147] CPU16: Booted secondary processor [410fd082]
+[    1.500581] Detected PIPT I-cache on CPU17
+[    1.500592] GICv3: CPU17: found redistributor 30001 region 17:0x000000006d140000
+[    1.500659] CPU17: using LPI pending table @0x00000417d8b90000
+[    1.500782] arch_timer: CPU17: Trapping CNTVCT access
+[    1.500785] CPU17: Booted secondary processor [410fd082]
+[    1.583224] Detected PIPT I-cache on CPU18
+[    1.583235] GICv3: CPU18: found redistributor 30002 region 18:0x000000006d180000
+[    1.583302] CPU18: using LPI pending table @0x00000417d8ba0000
+[    1.583426] arch_timer: CPU18: Trapping CNTVCT access
+[    1.583429] CPU18: Booted secondary processor [410fd082]
+[    1.665868] Detected PIPT I-cache on CPU19
+[    1.665879] GICv3: CPU19: found redistributor 30003 region 19:0x000000006d1c0000
+[    1.665943] CPU19: using LPI pending table @0x00000417d8bb0000
+[    1.666066] arch_timer: CPU19: Trapping CNTVCT access
+[    1.666069] CPU19: Booted secondary processor [410fd082]
+[    1.748514] Detected PIPT I-cache on CPU20
+[    1.748527] GICv3: CPU20: found redistributor 30100 region 20:0x000000006d200000
+[    1.748595] CPU20: using LPI pending table @0x00000417d8bc0000
+[    1.748719] arch_timer: CPU20: Trapping CNTVCT access
+[    1.748723] CPU20: Booted secondary processor [410fd082]
+[    1.831156] Detected PIPT I-cache on CPU21
+[    1.831167] GICv3: CPU21: found redistributor 30101 region 21:0x000000006d240000
+[    1.831232] CPU21: using LPI pending table @0x00000417d8bd0000
+[    1.831356] arch_timer: CPU21: Trapping CNTVCT access
+[    1.831359] CPU21: Booted secondary processor [410fd082]
+[    1.913800] Detected PIPT I-cache on CPU22
+[    1.913811] GICv3: CPU22: found redistributor 30102 region 22:0x000000006d280000
+[    1.913880] CPU22: using LPI pending table @0x00000417d8be0000
+[    1.914003] arch_timer: CPU22: Trapping CNTVCT access
+[    1.914006] CPU22: Booted secondary processor [410fd082]
+[    1.996443] Detected PIPT I-cache on CPU23
+[    1.996455] GICv3: CPU23: found redistributor 30103 region 23:0x000000006d2c0000
+[    1.996522] CPU23: using LPI pending table @0x00000417d8bf0000
+[    1.996645] arch_timer: CPU23: Trapping CNTVCT access
+[    1.996648] CPU23: Booted secondary processor [410fd082]
+[    2.079088] Detected PIPT I-cache on CPU24
+[    2.079102] GICv3: CPU24: found redistributor 30200 region 24:0x000000006d300000
+[    2.079170] CPU24: using LPI pending table @0x00000417d8000000
+[    2.079294] arch_timer: CPU24: Trapping CNTVCT access
+[    2.079298] CPU24: Booted secondary processor [410fd082]
+[    2.161731] Detected PIPT I-cache on CPU25
+[    2.161743] GICv3: CPU25: found redistributor 30201 region 25:0x000000006d340000
+[    2.161807] CPU25: using LPI pending table @0x00000417d8010000
+[    2.161930] arch_timer: CPU25: Trapping CNTVCT access
+[    2.161934] CPU25: Booted secondary processor [410fd082]
+[    2.244375] Detected PIPT I-cache on CPU26
+[    2.244388] GICv3: CPU26: found redistributor 30202 region 26:0x000000006d380000
+[    2.244453] CPU26: using LPI pending table @0x00000417d8020000
+[    2.244577] arch_timer: CPU26: Trapping CNTVCT access
+[    2.244580] CPU26: Booted secondary processor [410fd082]
+[    2.327019] Detected PIPT I-cache on CPU27
+[    2.327031] GICv3: CPU27: found redistributor 30203 region 27:0x000000006d3c0000
+[    2.327101] CPU27: using LPI pending table @0x00000417d8030000
+[    2.327224] arch_timer: CPU27: Trapping CNTVCT access
+[    2.327227] CPU27: Booted secondary processor [410fd082]
+[    2.409663] Detected PIPT I-cache on CPU28
+[    2.409678] GICv3: CPU28: found redistributor 30300 region 28:0x000000006d400000
+[    2.409744] CPU28: using LPI pending table @0x00000417d8040000
+[    2.409869] arch_timer: CPU28: Trapping CNTVCT access
+[    2.409873] CPU28: Booted secondary processor [410fd082]
+[    2.492305] Detected PIPT I-cache on CPU29
+[    2.492318] GICv3: CPU29: found redistributor 30301 region 29:0x000000006d440000
+[    2.492387] CPU29: using LPI pending table @0x00000417d8050000
+[    2.492511] arch_timer: CPU29: Trapping CNTVCT access
+[    2.492514] CPU29: Booted secondary processor [410fd082]
+[    2.574948] Detected PIPT I-cache on CPU30
+[    2.574962] GICv3: CPU30: found redistributor 30302 region 30:0x000000006d480000
+[    2.575027] CPU30: using LPI pending table @0x00000417d8060000
+[    2.575150] arch_timer: CPU30: Trapping CNTVCT access
+[    2.575153] CPU30: Booted secondary processor [410fd082]
+[    2.657592] Detected PIPT I-cache on CPU31
+[    2.657605] GICv3: CPU31: found redistributor 30303 region 31:0x000000006d4c0000
+[    2.657672] CPU31: using LPI pending table @0x00000417d8070000
+[    2.657795] arch_timer: CPU31: Trapping CNTVCT access
+[    2.657798] CPU31: Booted secondary processor [410fd082]
+[    2.739929] Detected PIPT I-cache on CPU32
+[    2.739984] GICv3: CPU32: found redistributor 50000 region 32:0x000004004d100000
+[    2.740027] CPU32: using LPI pending table @0x00000417d8100000
+[    2.740194] arch_timer: CPU32: Trapping CNTVCT access
+[    2.740203] CPU32: Booted secondary processor [410fd082]
+[    2.822564] Detected PIPT I-cache on CPU33
+[    2.822597] GICv3: CPU33: found redistributor 50001 region 33:0x000004004d140000
+[    2.822633] CPU33: using LPI pending table @0x00000417d8190000
+[    2.822757] arch_timer: CPU33: Trapping CNTVCT access
+[    2.822760] CPU33: Booted secondary processor [410fd082]
+[    2.905220] Detected PIPT I-cache on CPU34
+[    2.905253] GICv3: CPU34: found redistributor 50002 region 34:0x000004004d180000
+[    2.905289] CPU34: using LPI pending table @0x00000417d81f0000
+[    2.905412] arch_timer: CPU34: Trapping CNTVCT access
+[    2.905415] CPU34: Booted secondary processor [410fd082]
+[    2.987877] Detected PIPT I-cache on CPU35
+[    2.987910] GICv3: CPU35: found redistributor 50003 region 35:0x000004004d1c0000
+[    2.987946] CPU35: using LPI pending table @0x00000417d8280000
+[    2.988068] arch_timer: CPU35: Trapping CNTVCT access
+[    2.988071] CPU35: Booted secondary processor [410fd082]
+[    3.070537] Detected PIPT I-cache on CPU36
+[    3.070572] GICv3: CPU36: found redistributor 50100 region 36:0x000004004d200000
+[    3.070607] CPU36: using LPI pending table @0x00000417d82e0000
+[    3.070733] arch_timer: CPU36: Trapping CNTVCT access
+[    3.070736] CPU36: Booted secondary processor [410fd082]
+[    3.153193] Detected PIPT I-cache on CPU37
+[    3.153226] GICv3: CPU37: found redistributor 50101 region 37:0x000004004d240000
+[    3.153262] CPU37: using LPI pending table @0x00000417d8360000
+[    3.153384] arch_timer: CPU37: Trapping CNTVCT access
+[    3.153387] CPU37: Booted secondary processor [410fd082]
+[    3.235851] Detected PIPT I-cache on CPU38
+[    3.235885] GICv3: CPU38: found redistributor 50102 region 38:0x000004004d280000
+[    3.235921] CPU38: using LPI pending table @0x00000417d83c0000
+[    3.236044] arch_timer: CPU38: Trapping CNTVCT access
+[    3.236047] CPU38: Booted secondary processor [410fd082]
+[    3.318507] Detected PIPT I-cache on CPU39
+[    3.318541] GICv3: CPU39: found redistributor 50103 region 39:0x000004004d2c0000
+[    3.318577] CPU39: using LPI pending table @0x00000417d7c40000
+[    3.318699] arch_timer: CPU39: Trapping CNTVCT access
+[    3.318702] CPU39: Booted secondary processor [410fd082]
+[    3.401166] Detected PIPT I-cache on CPU40
+[    3.401201] GICv3: CPU40: found redistributor 50200 region 40:0x000004004d300000
+[    3.401238] CPU40: using LPI pending table @0x00000417d7ca0000
+[    3.401363] arch_timer: CPU40: Trapping CNTVCT access
+[    3.401366] CPU40: Booted secondary processor [410fd082]
+[    3.483819] Detected PIPT I-cache on CPU41
+[    3.483854] GICv3: CPU41: found redistributor 50201 region 41:0x000004004d340000
+[    3.483890] CPU41: using LPI pending table @0x00000417d7d20000
+[    3.484012] arch_timer: CPU41: Trapping CNTVCT access
+[    3.484015] CPU41: Booted secondary processor [410fd082]
+[    3.566475] Detected PIPT I-cache on CPU42
+[    3.566510] GICv3: CPU42: found redistributor 50202 region 42:0x000004004d380000
+[    3.566546] CPU42: using LPI pending table @0x00000417d7d90000
+[    3.566671] arch_timer: CPU42: Trapping CNTVCT access
+[    3.566675] CPU42: Booted secondary processor [410fd082]
+[    3.649132] Detected PIPT I-cache on CPU43
+[    3.649166] GICv3: CPU43: found redistributor 50203 region 43:0x000004004d3c0000
+[    3.649202] CPU43: using LPI pending table @0x00000417d7e10000
+[    3.649324] arch_timer: CPU43: Trapping CNTVCT access
+[    3.649327] CPU43: Booted secondary processor [410fd082]
+[    3.731791] Detected PIPT I-cache on CPU44
+[    3.731828] GICv3: CPU44: found redistributor 50300 region 44:0x000004004d400000
+[    3.731864] CPU44: using LPI pending table @0x00000417d7e70000
+[    3.731988] arch_timer: CPU44: Trapping CNTVCT access
+[    3.731992] CPU44: Booted secondary processor [410fd082]
+[    3.814444] Detected PIPT I-cache on CPU45
+[    3.814480] GICv3: CPU45: found redistributor 50301 region 45:0x000004004d440000
+[    3.814515] CPU45: using LPI pending table @0x00000417d7ed0000
+[    3.814639] arch_timer: CPU45: Trapping CNTVCT access
+[    3.814642] CPU45: Booted secondary processor [410fd082]
+[    3.897102] Detected PIPT I-cache on CPU46
+[    3.897137] GICv3: CPU46: found redistributor 50302 region 46:0x000004004d480000
+[    3.897174] CPU46: using LPI pending table @0x00000417d7f50000
+[    3.897298] arch_timer: CPU46: Trapping CNTVCT access
+[    3.897301] CPU46: Booted secondary processor [410fd082]
+[    3.979757] Detected PIPT I-cache on CPU47
+[    3.979793] GICv3: CPU47: found redistributor 50303 region 47:0x000004004d4c0000
+[    3.979829] CPU47: using LPI pending table @0x00000417d7fb0000
+[    3.979952] arch_timer: CPU47: Trapping CNTVCT access
+[    3.979955] CPU47: Booted secondary processor [410fd082]
+[    4.062070] Detected PIPT I-cache on CPU48
+[    4.062114] GICv3: CPU48: found redistributor 70000 region 48:0x000004006d100000
+[    4.062141] CPU48: using LPI pending table @0x00000417d7fe0000
+[    4.062268] arch_timer: CPU48: Trapping CNTVCT access
+[    4.062273] CPU48: Booted secondary processor [410fd082]
+[    4.144725] Detected PIPT I-cache on CPU49
+[    4.144765] GICv3: CPU49: found redistributor 70001 region 49:0x000004006d140000
+[    4.144790] CPU49: using LPI pending table @0x00000417d7810000
+[    4.144914] arch_timer: CPU49: Trapping CNTVCT access
+[    4.144917] CPU49: Booted secondary processor [410fd082]
+[    4.227382] Detected PIPT I-cache on CPU50
+[    4.227422] GICv3: CPU50: found redistributor 70002 region 50:0x000004006d180000
+[    4.227448] CPU50: using LPI pending table @0x00000417d7840000
+[    4.227572] arch_timer: CPU50: Trapping CNTVCT access
+[    4.227575] CPU50: Booted secondary processor [410fd082]
+[    4.302037] Detected PIPT I-cache on CPU51
+[    4.302077] GICv3: CPU51: found redistributor 70003 region 51:0x000004006d1c0000
+[    4.302102] CPU51: using LPI pending table @0x00000417d7990000
+[    4.302225] arch_timer: CPU51: Trapping CNTVCT access
+[    4.302228] CPU51: Booted secondary processor [410fd082]
+[    4.384697] Detected PIPT I-cache on CPU52
+[    4.384741] GICv3: CPU52: found redistributor 70100 region 52:0x000004006d200000
+[    4.384767] CPU52: using LPI pending table @0x00000417d79a0000
+[    4.384895] arch_timer: CPU52: Trapping CNTVCT access
+[    4.384899] CPU52: Booted secondary processor [410fd082]
+[    4.467351] Detected PIPT I-cache on CPU53
+[    4.467391] GICv3: CPU53: found redistributor 70101 region 53:0x000004006d240000
+[    4.467417] CPU53: using LPI pending table @0x00000417d79d0000
+[    4.467542] arch_timer: CPU53: Trapping CNTVCT access
+[    4.467544] CPU53: Booted secondary processor [410fd082]
+[    4.550008] Detected PIPT I-cache on CPU54
+[    4.550049] GICv3: CPU54: found redistributor 70102 region 54:0x000004006d280000
+[    4.550076] CPU54: using LPI pending table @0x00000417d7a00000
+[    4.550201] arch_timer: CPU54: Trapping CNTVCT access
+[    4.550204] CPU54: Booted secondary processor [410fd082]
+[    4.632667] Detected PIPT I-cache on CPU55
+[    4.632707] GICv3: CPU55: found redistributor 70103 region 55:0x000004006d2c0000
+[    4.632732] CPU55: using LPI pending table @0x00000417d7a30000
+[    4.632855] arch_timer: CPU55: Trapping CNTVCT access
+[    4.632858] CPU55: Booted secondary processor [410fd082]
+[    4.715327] Detected PIPT I-cache on CPU56
+[    4.715371] GICv3: CPU56: found redistributor 70200 region 56:0x000004006d300000
+[    4.715399] CPU56: using LPI pending table @0x00000417d7a60000
+[    4.715525] arch_timer: CPU56: Trapping CNTVCT access
+[    4.715530] CPU56: Booted secondary processor [410fd082]
+[    4.797981] Detected PIPT I-cache on CPU57
+[    4.798022] GICv3: CPU57: found redistributor 70201 region 57:0x000004006d340000
+[    4.798048] CPU57: using LPI pending table @0x00000417d7a70000
+[    4.798171] arch_timer: CPU57: Trapping CNTVCT access
+[    4.798174] CPU57: Booted secondary processor [410fd082]
+[    4.880639] Detected PIPT I-cache on CPU58
+[    4.880680] GICv3: CPU58: found redistributor 70202 region 58:0x000004006d380000
+[    4.880707] CPU58: using LPI pending table @0x00000417d7aa0000
+[    4.880832] arch_timer: CPU58: Trapping CNTVCT access
+[    4.880835] CPU58: Booted secondary processor [410fd082]
+[    4.963295] Detected PIPT I-cache on CPU59
+[    4.963337] GICv3: CPU59: found redistributor 70203 region 59:0x000004006d3c0000
+[    4.963364] CPU59: using LPI pending table @0x00000417d7ad0000
+[    4.963487] arch_timer: CPU59: Trapping CNTVCT access
+[    4.963490] CPU59: Booted secondary processor [410fd082]
+[    5.045958] Detected PIPT I-cache on CPU60
+[    5.046003] GICv3: CPU60: found redistributor 70300 region 60:0x000004006d400000
+[    5.046030] CPU60: using LPI pending table @0x00000417d7b00000
+[    5.046157] arch_timer: CPU60: Trapping CNTVCT access
+[    5.046161] CPU60: Booted secondary processor [410fd082]
+[    5.128611] Detected PIPT I-cache on CPU61
+[    5.128653] GICv3: CPU61: found redistributor 70301 region 61:0x000004006d440000
+[    5.128679] CPU61: using LPI pending table @0x00000417d7b10000
+[    5.128801] arch_timer: CPU61: Trapping CNTVCT access
+[    5.128804] CPU61: Booted secondary processor [410fd082]
+[    5.211271] Detected PIPT I-cache on CPU62
+[    5.211313] GICv3: CPU62: found redistributor 70302 region 62:0x000004006d480000
+[    5.211339] CPU62: using LPI pending table @0x00000417d7b30000
+[    5.211466] arch_timer: CPU62: Trapping CNTVCT access
+[    5.211468] CPU62: Booted secondary processor [410fd082]
+[    5.293928] Detected PIPT I-cache on CPU63
+[    5.293971] GICv3: CPU63: found redistributor 70303 region 63:0x000004006d4c0000
+[    5.293997] CPU63: using LPI pending table @0x00000417d7b60000
+[    5.294120] arch_timer: CPU63: Trapping CNTVCT access
+[    5.294123] CPU63: Booted secondary processor [410fd082]
+[    5.294235] smp: Brought up 4 nodes, 64 CPUs
+[    5.294452] SMP: Total of 64 processors activated.
+[    5.294456] CPU features: detected feature: GIC system register CPU interface
+[    5.294459] CPU features: detected feature: 32-bit EL0 Support
+[    5.295757] CPU: All CPU(s) started at EL2
+[    5.306480] devtmpfs: initialized
+[    5.307133] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    5.307437] futex hash table entries: 16384 (order: 9, 2097152 bytes)
+[    5.308022] pinctrl core: initialized pinctrl subsystem
+[    5.308407] SMBIOS 3.0.0 present.
+[    5.308413] DMI: Huawei Taishan 2280 /D05, BIOS Hisilicon D05 UEFI Nemo 1.8 RC0 08/31/2017
+[    5.308562] NET: Registered protocol family 16
+[    5.309881] cpuidle: using governor menu
+[    5.309959] vdso: 2 pages (1 code @ ffff000008bd6000, 1 data @ ffff0000091e5000)
+[    5.310006] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    5.311076] DMA: preallocated 256 KiB pool for atomic allocations
+[    5.311150] ACPI: bus type PCI registered
+[    5.311153] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    5.311250] Serial: AMBA PL011 UART driver
+[    5.317098] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    5.318439] ACPI: Added _OSI(Module Device)
+[    5.318443] ACPI: Added _OSI(Processor Device)
+[    5.318446] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    5.318449] ACPI: Added _OSI(Processor Aggregator Device)
+[    5.323886] ACPI: Interpreter enabled
+[    5.323890] ACPI: Using GIC for interrupt routing
+[    5.323909] ACPI: MCFG table detected, 8 entries
+[    5.323917] ACPI: IORT: SMMU-v3[a0040000] Mapped to Proximity domain 0
+[    5.323961] ACPI: IORT: SMMU-v3[700a0040000] Mapped to Proximity domain 3
+[    5.323992] ACPI: IORT: SMMU-v3[c0040000] Mapped to Proximity domain 0
+[    5.324024] ACPI: IORT: SMMU-v3[8a0040000] Mapped to Proximity domain 1
+[    5.324057] ACPI: IORT: SMMU-v3[600a0040000] Mapped to Proximity domain 2
+[    5.337993] acpi IPI0001:00: _SRS 64IO: [0xe4 - 0xe7]
+[    5.338057] acpi HISI1031:00: _SRS 64IO: [0x2f8 - 0x2ff]
+[    5.341762] ACPI: PCI Root Bridge [PCI2] (domain 0002 [bus f8-ff])
+[    5.341771] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.341853] acpi PNP0A08:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.341882] acpi PNP0A08:00: MCFG quirk: ECAM at [mem 0xaf800000-0xafffffff] for [bus f8-ff] with hisi_pcie_ops
+[    5.343034] acpi PNP0A08:00: ECAM area [mem 0xaf800000-0xafffffff] reserved by PNP0C02:00
+[    5.343598] acpi PNP0A08:00: ECAM at [mem 0xaf800000-0xafffffff] for [bus f8-ff]
+[    5.343635] Remapped I/O 0x00000000af7f0000 to [io  0x0400-0x103ff window]
+[    5.343705] PCI host bridge to bus 0002:f8
+[    5.343710] pci_bus 0002:f8: root bus resource [mem 0xa8000000-0xaf7effff window]
+[    5.343714] pci_bus 0002:f8: root bus resource [io  0x0400-0x103ff window] (bus address [0x0000-0xffff])
+[    5.343718] pci_bus 0002:f8: root bus resource [bus f8-ff]
+[    5.343735] pci 0002:f8:00.0: [19e5:1610] type 01 class 0x060400
+[    5.343744] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343749] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343756] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343762] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343766] pci 0002:f8:00.0: reg 0x10: [mem 0x00000000-0x0000ffff]
+[    5.343770] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343776] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343780] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343786] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x4 may corrupt adjacent RW1C bits
+[    5.343806] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x52 may corrupt adjacent RW1C bits
+[    5.343827] pci 0002:f8:00.0: supports D1 D2
+[    5.343830] pci 0002:f8:00.0: PME# supported from D0 D1 D3hot
+[    5.343834] pci_bus 0002:f8: 2-byte config write to 0002:f8:00.0 offset 0x44 may corrupt adjacent RW1C bits
+[    5.395166] pci_bus 0002:f8: on NUMA node 0
+[    5.395177] pci 0002:f8:00.0: BAR 0: assigned [mem 0xa8000000-0xa800ffff]
+[    5.395183] pci 0002:f8:00.0: PCI bridge to [bus f9]
+[    5.395350] ACPI: PCI Root Bridge [PCI4] (domain 0004 [bus 88-8f])
+[    5.395356] acpi PNP0A08:01: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.395434] acpi PNP0A08:01: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.395454] acpi PNP0A08:01: MCFG quirk: ECAM at [mem 0x8a8800000-0x8a8ffffff] for [bus 88-8f] with hisi_pcie_ops
+[    5.396926] acpi PNP0A08:01: ECAM area [mem 0x8a8800000-0x8a8ffffff] reserved by PNP0C02:01
+[    5.397523] acpi PNP0A08:01: ECAM at [mem 0x8a8800000-0x8a8ffffff] for [bus 88-8f]
+[    5.397556] Remapped I/O 0x00000008abff0000 to [io  0x10400-0x203ff window]
+[    5.397608] PCI host bridge to bus 0004:88
+[    5.397613] pci_bus 0004:88: root bus resource [mem 0x8a9000000-0x8abfeffff window] (bus address [0xa9000000-0xabfeffff])
+[    5.397617] pci_bus 0004:88: root bus resource [io  0x10400-0x203ff window] (bus address [0x0000-0xffff])
+[    5.397621] pci_bus 0004:88: root bus resource [bus 88-8f]
+[    5.397633] pci 0004:88:00.0: [19e5:1610] type 01 class 0x060400
+[    5.397650] pci 0004:88:00.0: reg 0x10: [mem 0x00000000-0x0000ffff]
+[    5.397692] pci 0004:88:00.0: supports D1 D2
+[    5.397695] pci 0004:88:00.0: PME# supported from D0 D1 D3hot
+[    5.449016] pci_bus 0004:88: on NUMA node 1
+[    5.449025] pci 0004:88:00.0: BAR 0: assigned [mem 0x8a9000000-0x8a900ffff]
+[    5.449030] pci 0004:88:00.0: PCI bridge to [bus 89]
+[    5.449208] ACPI: PCI Root Bridge [PCI5] (domain 0005 [bus 78-7f])
+[    5.449214] acpi PNP0A08:02: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.449292] acpi PNP0A08:02: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.449312] acpi PNP0A08:02: MCFG quirk: ECAM at [mem 0x8b7800000-0x8b7ffffff] for [bus 78-7f] with hisi_pcie_ops
+[    5.450773] acpi PNP0A08:02: ECAM area [mem 0x8b7800000-0x8b7ffffff] reserved by PNP0C02:01
+[    5.451411] acpi PNP0A08:02: ECAM at [mem 0x8b7800000-0x8b7ffffff] for [bus 78-7f]
+[    5.451444] Remapped I/O 0x00000008b77f0000 to [io  0x20400-0x303ff window]
+[    5.451498] PCI host bridge to bus 0005:78
+[    5.451503] pci_bus 0005:78: root bus resource [mem 0x8b0000000-0x8b77effff window] (bus address [0xb0000000-0xb77effff])
+[    5.451508] pci_bus 0005:78: root bus resource [io  0x20400-0x303ff window] (bus address [0x0000-0xffff])
+[    5.451511] pci_bus 0005:78: root bus resource [bus 78-7f]
+[    5.451523] pci 0005:78:00.0: [19e5:1610] type 01 class 0x060400
+[    5.451540] pci 0005:78:00.0: reg 0x10: [mem 0x00000000-0x00000fff]
+[    5.451552] pci 0005:78:00.0: reg 0x38: [mem 0xfffe0000-0xffffffff pref]
+[    5.451589] pci 0005:78:00.0: supports D1 D2
+[    5.451591] pci 0005:78:00.0: PME# supported from D0 D1 D3hot
+[    5.502916] pci_bus 0005:78: on NUMA node 1
+[    5.502926] pci 0005:78:00.0: BAR 6: assigned [mem 0x8b0000000-0x8b001ffff pref]
+[    5.502930] pci 0005:78:00.0: BAR 0: assigned [mem 0x8b0020000-0x8b0020fff]
+[    5.502934] pci 0005:78:00.0: PCI bridge to [bus 79]
+[    5.503104] ACPI: PCI Root Bridge [PCI6] (domain 0006 [bus c0-c7])
+[    5.503109] acpi PNP0A08:03: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.503187] acpi PNP0A08:03: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.503207] acpi PNP0A08:03: MCFG quirk: ECAM at [mem 0x8ac000000-0x8ac7fffff] for [bus c0-c7] with hisi_pcie_ops
+[    5.504673] acpi PNP0A08:03: ECAM area [mem 0x8ac000000-0x8ac7fffff] reserved by PNP0C02:01
+[    5.505353] acpi PNP0A08:03: ECAM at [mem 0x8ac000000-0x8ac7fffff] for [bus c0-c7]
+[    5.505385] Remapped I/O 0x00000008afff0000 to [io  0x30400-0x403ff window]
+[    5.505446] PCI host bridge to bus 0006:c0
+[    5.505451] pci_bus 0006:c0: root bus resource [mem 0x8ac900000-0x8affeffff window] (bus address [0xac900000-0xaffeffff])
+[    5.505455] pci_bus 0006:c0: root bus resource [io  0x30400-0x403ff window] (bus address [0x0000-0xffff])
+[    5.505459] pci_bus 0006:c0: root bus resource [bus c0-c7]
+[    5.505471] pci 0006:c0:00.0: [19e5:1610] type 01 class 0x060400
+[    5.505487] pci 0006:c0:00.0: reg 0x10: [mem 0x00000000-0x0000ffff]
+[    5.505530] pci 0006:c0:00.0: supports D1 D2
+[    5.505532] pci 0006:c0:00.0: PME# supported from D0 D1 D3hot
+[    5.556856] pci_bus 0006:c0: on NUMA node 1
+[    5.556865] pci 0006:c0:00.0: BAR 0: assigned [mem 0x8ac900000-0x8ac90ffff]
+[    5.556870] pci 0006:c0:00.0: PCI bridge to [bus c1]
+[    5.557038] ACPI: PCI Root Bridge [PCI7] (domain 0007 [bus 90-97])
+[    5.557044] acpi PNP0A08:04: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.557121] acpi PNP0A08:04: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.557141] acpi PNP0A08:04: MCFG quirk: ECAM at [mem 0x8b9000000-0x8b97fffff] for [bus 90-97] with hisi_pcie_ops
+[    5.558605] acpi PNP0A08:04: ECAM area [mem 0x8b9000000-0x8b97fffff] reserved by PNP0C02:01
+[    5.559326] acpi PNP0A08:04: ECAM at [mem 0x8b9000000-0x8b97fffff] for [bus 90-97]
+[    5.559359] Remapped I/O 0x00000008bfff0000 to [io  0x40400-0x503ff window]
+[    5.559414] PCI host bridge to bus 0007:90
+[    5.559419] pci_bus 0007:90: root bus resource [mem 0x8b9800000-0x8bffeffff window] (bus address [0xb9800000-0xbffeffff])
+[    5.559423] pci_bus 0007:90: root bus resource [io  0x40400-0x503ff window] (bus address [0x0000-0xffff])
+[    5.559426] pci_bus 0007:90: root bus resource [bus 90-97]
+[    5.559438] pci 0007:90:00.0: [19e5:1610] type 01 class 0x060400
+[    5.559489] pci 0007:90:00.0: supports D1 D2
+[    5.559491] pci 0007:90:00.0: PME# supported from D0 D1 D3hot
+[    5.559613] pci 0007:91:00.0: [19e5:1711] type 00 class 0x030000
+[    5.559642] pci 0007:91:00.0: reg 0x10: [mem 0x8ba000000-0x8bbffffff pref]
+[    5.559656] pci 0007:91:00.0: reg 0x14: [mem 0x8b9800000-0x8b99fffff]
+[    5.559777] pci 0007:91:00.0: supports D1
+[    5.559779] pci 0007:91:00.0: PME# supported from D0 D1 D3hot
+[    5.559859] pci_bus 0007:90: on NUMA node 1
+[    5.559868] pci 0007:90:00.0: BAR 14: assigned [mem 0x8ba000000-0x8bcffffff]
+[    5.559873] pci 0007:91:00.0: BAR 0: assigned [mem 0x8ba000000-0x8bbffffff pref]
+[    5.559880] pci 0007:91:00.0: BAR 1: assigned [mem 0x8bc000000-0x8bc1fffff]
+[    5.559887] pci 0007:90:00.0: PCI bridge to [bus 91]
+[    5.559892] pci 0007:90:00.0:   bridge window [mem 0x8ba000000-0x8bcffffff]
+[    5.560068] ACPI: PCI Root Bridge [PCIA] (domain 000a [bus 10-1f])
+[    5.560074] acpi PNP0A08:05: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.560150] acpi PNP0A08:05: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.560175] acpi PNP0A08:05: MCFG quirk: ECAM at [mem 0x64001000000-0x64001ffffff] for [bus 10-1f] with hisi_pcie_ops
+[    5.561703] acpi PNP0A08:05: ECAM area [mem 0x64001000000-0x64001ffffff] reserved by PNP0C02:02
+[    5.562460] acpi PNP0A08:05: ECAM at [mem 0x64001000000-0x64001ffffff] for [bus 10-1f]
+[    5.562492] Remapped I/O 0x0000067fffff0000 to [io  0x50400-0x603ff window]
+[    5.562549] PCI host bridge to bus 000a:10
+[    5.562554] pci_bus 000a:10: root bus resource [mem 0x65040000000-0x650efffffff window] (bus address [0x40000000-0xefffffff])
+[    5.562558] pci_bus 000a:10: root bus resource [io  0x50400-0x603ff window] (bus address [0x0000-0xffff])
+[    5.562562] pci_bus 000a:10: root bus resource [bus 10-1f]
+[    5.562576] pci 000a:10:00.0: [19e5:1610] type 01 class 0x060400
+[    5.562594] pci 000a:10:00.0: reg 0x10: [mem 0x00000000-0x0000ffff]
+[    5.562641] pci 000a:10:00.0: supports D1 D2
+[    5.562644] pci 000a:10:00.0: PME# supported from D0 D1 D3hot
+[    5.613962] pci_bus 000a:10: on NUMA node 2
+[    5.613971] pci 000a:10:00.0: BAR 0: assigned [mem 0x65040000000-0x6504000ffff]
+[    5.613977] pci 000a:10:00.0: PCI bridge to [bus 11]
+[    5.614138] ACPI: PCI Root Bridge [PCIC] (domain 000c [bus 20-2f])
+[    5.614144] acpi PNP0A08:06: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.614222] acpi PNP0A08:06: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.614239] acpi PNP0A08:06: MCFG quirk: ECAM at [mem 0x74002000000-0x74002ffffff] for [bus 20-2f] with hisi_pcie_ops
+[    5.615929] acpi PNP0A08:06: ECAM area [mem 0x74002000000-0x74002ffffff] reserved by PNP0C02:03
+[    5.616733] acpi PNP0A08:06: ECAM at [mem 0x74002000000-0x74002ffffff] for [bus 20-2f]
+[    5.616765] Remapped I/O 0x0000077fffff0000 to [io  0x60400-0x703ff window]
+[    5.616818] PCI host bridge to bus 000c:20
+[    5.616822] pci_bus 000c:20: root bus resource [mem 0x75040000000-0x750efffffff window] (bus address [0x40000000-0xefffffff])
+[    5.616826] pci_bus 000c:20: root bus resource [io  0x60400-0x703ff window] (bus address [0x0000-0xffff])
+[    5.616830] pci_bus 000c:20: root bus resource [bus 20-2f]
+[    5.616844] pci 000c:20:00.0: [19e5:1610] type 01 class 0x060400
+[    5.616864] pci 000c:20:00.0: reg 0x10: [mem 0x00000000-0x0000ffff]
+[    5.616917] pci 000c:20:00.0: supports D1 D2
+[    5.616920] pci 000c:20:00.0: PME# supported from D0 D1 D3hot
+[    5.668246] pci_bus 000c:20: on NUMA node 3
+[    5.668256] pci 000c:20:00.0: BAR 0: assigned [mem 0x75040000000-0x7504000ffff]
+[    5.668261] pci 000c:20:00.0: PCI bridge to [bus 21]
+[    5.668434] ACPI: PCI Root Bridge [PCID] (domain 000d [bus 30-3f])
+[    5.668440] acpi PNP0A08:07: _OSC: OS supports [ExtendedConfig Segments MSI]
+[    5.668517] acpi PNP0A08:07: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    5.668535] acpi PNP0A08:07: MCFG quirk: ECAM at [mem 0x78003000000-0x78003ffffff] for [bus 30-3f] with hisi_pcie_ops
+[    5.670222] acpi PNP0A08:07: ECAM area [mem 0x78003000000-0x78003ffffff] reserved by PNP0C02:03
+[    5.671066] acpi PNP0A08:07: ECAM at [mem 0x78003000000-0x78003ffffff] for [bus 30-3f]
+[    5.671099] Remapped I/O 0x000007bfffff0000 to [io  0x70400-0x803ff window]
+[    5.671151] PCI host bridge to bus 000d:30
+[    5.671156] pci_bus 000d:30: root bus resource [mem 0x79040000000-0x790efffffff window] (bus address [0x40000000-0xefffffff])
+[    5.671160] pci_bus 000d:30: root bus resource [io  0x70400-0x803ff window] (bus address [0x0000-0xffff])
+[    5.671164] pci_bus 000d:30: root bus resource [bus 30-3f]
+[    5.671177] pci 000d:30:00.0: [19e5:1610] type 01 class 0x060400
+[    5.671198] pci 000d:30:00.0: reg 0x10: [mem 0x00000000-0x00000fff]
+[    5.671213] pci 000d:30:00.0: reg 0x38: [mem 0xfffe0000-0xffffffff pref]
+[    5.671259] pci 000d:30:00.0: supports D1 D2
+[    5.671262] pci 000d:30:00.0: PME# supported from D0 D1 D3hot
+[    5.722595] pci_bus 000d:30: on NUMA node 3
+[    5.722605] pci 000d:30:00.0: BAR 6: assigned [mem 0x79040000000-0x7904001ffff pref]
+[    5.722609] pci 000d:30:00.0: BAR 0: assigned [mem 0x79040020000-0x79040020fff]
+[    5.722614] pci 000d:30:00.0: PCI bridge to [bus 31]
+[    5.724196] pci 0007:91:00.0: vgaarb: VGA device added: decodes=io+mem,owns=none,locks=none
+[    5.724202] pci 0007:91:00.0: vgaarb: bridge control possible
+[    5.724204] vgaarb: loaded
+[    5.724338] SCSI subsystem initialized
+[    5.724559] libata version 3.00 loaded.
+[    5.724615] ACPI: bus type USB registered
+[    5.724657] usbcore: registered new interface driver usbfs
+[    5.724673] usbcore: registered new interface driver hub
+[    5.724915] usbcore: registered new device driver usb
+[    5.725191] pps_core: LinuxPPS API ver. 1 registered
+[    5.725195] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    5.725203] PTP clock support registered
+[    5.725245] EDAC MC: Ver: 3.0.0
+[    5.725418] Registered efivars operations
+[    5.726548] Advanced Linux Sound Architecture Driver Initialized.
+[    5.727511] DMA-API: preallocated 4096 debug entries
+[    5.727515] DMA-API: debugging enabled by kernel config
+[    5.727682] clocksource: Switched to clocksource arch_sys_counter
+[    5.727870] VFS: Disk quotas dquot_6.6.0
+[    5.727901] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    5.727986] pnp: PnP ACPI init
+[    5.728082] pnp 00:00: Plug and Play ACPI device, IDs PNP0501 (active)
+[    5.728773] system 00:01: [mem 0xa00a0000-0xa00affff] has been reserved
+[    5.728786] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.728841] system 00:02: [mem 0xaf800000-0xafffffff] could not be reserved
+[    5.728851] system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.728961] system 00:03: [mem 0x8a0090000-0x8a009ffff] has been reserved
+[    5.728974] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729085] system 00:04: [mem 0x8a0200000-0x8a020ffff] has been reserved
+[    5.729096] system 00:04: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729205] system 00:05: [mem 0x8a00a0000-0x8a00affff] has been reserved
+[    5.729215] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729322] system 00:06: [mem 0x8a00b0000-0x8a00bffff] has been reserved
+[    5.729333] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729413] system 00:07: [mem 0x8a8800000-0x8a8ffffff] could not be reserved
+[    5.729418] system 00:07: [mem 0x8b7800000-0x8b7ffffff] could not be reserved
+[    5.729422] system 00:07: [mem 0x8ac000000-0x8ac7fffff] could not be reserved
+[    5.729426] system 00:07: [mem 0x8b9000000-0x8b97fffff] could not be reserved
+[    5.729435] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729506] system 00:08: [mem 0x600a00a0000-0x600a00affff] has been reserved
+[    5.729516] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729574] system 00:09: [mem 0x64001000000-0x64001ffffff] could not be reserved
+[    5.729583] system 00:09: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729693] system 00:0a: [mem 0x700a0090000-0x700a009ffff] has been reserved
+[    5.729703] system 00:0a: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729816] system 00:0b: [mem 0x700a0200000-0x700a020ffff] has been reserved
+[    5.729826] system 00:0b: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.729906] system 00:0c: [mem 0x74002000000-0x74002ffffff] could not be reserved
+[    5.729911] system 00:0c: [mem 0x78003000000-0x78003ffffff] could not be reserved
+[    5.729920] system 00:0c: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    5.730065] pnp: PnP ACPI: found 13 devices
+[    5.732860] NET: Registered protocol family 2
+[    5.733612] TCP established hash table entries: 524288 (order: 10, 4194304 bytes)
+[    5.734965] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes)
+[    5.735507] TCP: Hash tables configured (established 524288 bind 65536)
+[    5.736094] UDP hash table entries: 32768 (order: 9, 3145728 bytes)
+[    5.737400] UDP-Lite hash table entries: 32768 (order: 9, 3145728 bytes)
+[    5.738455] NET: Registered protocol family 1
+[    5.738961] RPC: Registered named UNIX socket transport module.
+[    5.738964] RPC: Registered udp transport module.
+[    5.738966] RPC: Registered tcp transport module.
+[    5.738969] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    5.738998] PCI: CLS 0 bytes, default 128
+[    5.739057] Unpacking initramfs...
+[    6.163581] Freeing initrd memory: 23264K
+[    6.166374] hw perfevents: enabled with armv8_pmuv3_0 PMU driver, 7 counters available
+[    6.166598] kvm [1]: 8-bit VMID
+[    6.166601] kvm [1]: IDMAP page: bc3000
+[    6.166604] kvm [1]: HYP VA range: 800000000000:ffffffffffff
+[    6.167608] kvm [1]: Hyp mode initialized successfully
+[    6.167738] kvm [1]: vgic-v2@fe020000
+[    6.167827] kvm [1]: GIC system register CPU interface enabled
+[    6.168839] kvm [1]: vgic interrupt IRQ1
+[    6.168851] kvm [1]: virtual timer IRQ3
+[    6.172951] audit: initializing netlink subsys (disabled)
+[    6.173054] audit: type=2000 audit(4.144:1): state=initialized audit_enabled=0 res=1
+[    6.173273] workingset: timestamp_bits=44 max_order=24 bucket_order=0
+[    6.175722] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    6.176121] NFS: Registering the id_resolver key type
+[    6.176135] Key type id_resolver registered
+[    6.176138] Key type id_legacy registered
+[    6.176144] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    6.176194] 9p: Installing v9fs 9p2000 file system support
+[    6.177442] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    6.177447] io scheduler noop registered
+[    6.177518] io scheduler cfq registered (default)
+[    6.177521] io scheduler mq-deadline registered
+[    6.177524] io scheduler kyber registered
+[    6.179637] hisi_lpc HISI0191:00: probing...
+[    6.179654] hisi_lpc HISI0191:00: hslpc end probing. range[0x0 - 400]
+[    6.180736] pcieport 0002:f8:00.0: can't derive routing for PCI INT A
+[    6.180741] pcieport 0002:f8:00.0: PCI INT A: no GSI
+[    6.180823] pcieport 0004:88:00.0: can't derive routing for PCI INT A
+[    6.180827] pcieport 0004:88:00.0: PCI INT A: no GSI
+[    6.180903] pcieport 0005:78:00.0: can't derive routing for PCI INT A
+[    6.180906] pcieport 0005:78:00.0: PCI INT A: no GSI
+[    6.180980] pcieport 0006:c0:00.0: can't derive routing for PCI INT A
+[    6.180983] pcieport 0006:c0:00.0: PCI INT A: no GSI
+[    6.181054] pcieport 0007:90:00.0: can't derive routing for PCI INT A
+[    6.181057] pcieport 0007:90:00.0: PCI INT A: no GSI
+[    6.181126] pcieport 000a:10:00.0: can't derive routing for PCI INT A
+[    6.181130] pcieport 000a:10:00.0: PCI INT A: no GSI
+[    6.181238] pcieport 000c:20:00.0: can't derive routing for PCI INT A
+[    6.181241] pcieport 000c:20:00.0: PCI INT A: no GSI
+[    6.181332] pcieport 000d:30:00.0: can't derive routing for PCI INT A
+[    6.181336] pcieport 000d:30:00.0: PCI INT A: no GSI
+[    6.181706] ipmi message handler version 39.2
+[    6.181713] ipmi device interface
+[    6.181739] ipmi_si dmi-ipmi-si.0: probing via device tree
+[    6.181743] ipmi_si: probing via SMBIOS
+[    6.181747] ipmi_si: SMBIOS: io 0xe4 regsize 1 spacing 1 irq 0
+[    6.181751] ipmi_si: Adding SMBIOS-specified bt state machine
+[    6.181774] ipmi_si IPI0001:00: probing via device tree
+[    6.181777] ipmi_si IPI0001:00: ipmi_si: probing via ACPI
+[    6.181814] ipmi_si IPI0001:00: [io  0x00e4-0x00e7] regsize 1 spacing 1 irq 0
+[    6.181817] ipmi_si: ACPI-specified bt state machine: duplicate
+[    6.181939] IPMI System Interface driver.
+[    6.181965] ipmi_si: Trying SMBIOS-specified bt state machine at i/o address 0xe4, slave address 0x0, irq 0
+[    6.247702] IPMI BT: using default values
+[    6.247704] IPMI BT: req2rsp=5 secs retries=2
+[    6.455774] ipmi_si dmi-ipmi-si.0: Found new BMC (man_id: 0x0007db, prod_id: 0x0001, dev_id: 0x01)
+[    6.455835] ipmi_si dmi-ipmi-si.0: IPMI bt interface initialized
+[    6.455900] acpi-ged ACPI0013:00: GED listening GSI 424 @ IRQ 39
+[    6.456182] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+[    6.456198] ACPI: Power Button [PWRB]
+[    6.460009] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    6.481206] 00:00: ttyS0 at I/O 0x2f8 (irq = 0, base_baud = 115200) is a 16550A
+[    6.481908] SuperH (H)SCI(F) driver initialized
+[    6.481988] msm_serial: driver initialized
+[    6.482389] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    6.492769] loop: module loaded
+[    6.493113] megasas: 07.702.06.00-rc1
+[    6.493148] mpt3sas version 15.100.00.00 loaded
+[    6.495659] scsi host0: hisi_sas
+[    7.116970] hisi_sas_v2_hw HISI0162:01: phyup: phy0 link_rate=11
+[    7.116985] hisi_sas_v2_hw HISI0162:01: phyup: phy1 link_rate=11
+[    7.121966] hisi_sas_v2_hw HISI0162:01: phyup: phy2 link_rate=11
+[    7.121975] hisi_sas_v2_hw HISI0162:01: phyup: phy3 link_rate=11
+[    7.121982] hisi_sas_v2_hw HISI0162:01: phyup: phy4 link_rate=11
+[    7.121989] hisi_sas_v2_hw HISI0162:01: phyup: phy5 link_rate=11
+[    7.121995] hisi_sas_v2_hw HISI0162:01: phyup: phy6 link_rate=11
+[    7.122001] hisi_sas_v2_hw HISI0162:01: phyup: phy7 link_rate=11
+[    7.127103] sas: broadcast received: 0
+[    7.127136] sas: broadcast received: 0
+[    7.127208] sas: broadcast received: 0
+[    7.127281] sas: broadcast received: 0
+[    7.127354] sas: broadcast received: 0
+[    7.127428] sas: broadcast received: 0
+[    7.127501] sas: broadcast received: 0
+[    7.127771] sas: phy-0:0 added to port-0:0, phy_mask:0x1 (500e004aaaaaaa1f)
+[    7.127828] sas: DOING DISCOVERY on port 0, pid:2000
+[    7.127974] hisi_sas_v2_hw HISI0162:01: dev[0:2] found
+[    7.128524] sas: ex 500e004aaaaaaa1f phy00:U:0 attached: 0000000000000000 (no device)
+[    7.128623] sas: ex 500e004aaaaaaa1f phy01:U:0 attached: 0000000000000000 (no device)
+[    7.128743] sas: ex 500e004aaaaaaa1f phy02:U:0 attached: 0000000000000000 (no device)
+[    7.128863] sas: ex 500e004aaaaaaa1f phy03:U:A attached: 500e004aaaaaaa03 (stp)
+[    7.128968] sas: ex 500e004aaaaaaa1f phy04:U:0 attached: 0000000000000000 (no device)
+[    7.129065] sas: ex 500e004aaaaaaa1f phy05:U:0 attached: 0000000000000000 (no device)
+[    7.129162] sas: ex 500e004aaaaaaa1f phy06:U:A attached: 500e004aaaaaaa06 (stp)
+[    7.129261] sas: ex 500e004aaaaaaa1f phy07:U:0 attached: 0000000000000000 (no device)
+[    7.129358] sas: ex 500e004aaaaaaa1f phy08:U:0 attached: 0000000000000000 (no device)
+[    7.129457] sas: ex 500e004aaaaaaa1f phy09:U:0 attached: 0000000000000000 (no device)
+[    7.129551] sas: ex 500e004aaaaaaa1f phy10:U:0 attached: 0000000000000000 (no device)
+[    7.129648] sas: ex 500e004aaaaaaa1f phy11:U:0 attached: 0000000000000000 (no device)
+[    7.129745] sas: ex 500e004aaaaaaa1f phy12:U:0 attached: 0000000000000000 (no device)
+[    7.129854] sas: ex 500e004aaaaaaa1f phy13:U:0 attached: 0000000000000000 (no device)
+[    7.129952] sas: ex 500e004aaaaaaa1f phy14:U:0 attached: 0000000000000000 (no device)
+[    7.130047] sas: ex 500e004aaaaaaa1f phy15:U:0 attached: 0000000000000000 (no device)
+[    7.130149] sas: ex 500e004aaaaaaa1f phy16:U:B attached: 3201581410000000 (host)
+[    7.130245] sas: ex 500e004aaaaaaa1f phy17:U:B attached: 3201581410000000 (host)
+[    7.130350] sas: ex 500e004aaaaaaa1f phy18:U:B attached: 3201581410000000 (host)
+[    7.130451] sas: ex 500e004aaaaaaa1f phy19:U:B attached: 3201581410000000 (host)
+[    7.130547] sas: ex 500e004aaaaaaa1f phy20:U:B attached: 3201581410000000 (host)
+[    7.130647] sas: ex 500e004aaaaaaa1f phy21:U:B attached: 3201581410000000 (host)
+[    7.130755] sas: ex 500e004aaaaaaa1f phy22:U:B attached: 3201581410000000 (host)
+[    7.130874] sas: ex 500e004aaaaaaa1f phy23:U:B attached: 3201581410000000 (host)
+[    7.130984] sas: ex 500e004aaaaaaa1f phy24:D:B attached: 500e004aaaaaaa1e (host+target)
+[    7.131123] ata_dev_classify: found ATA device by sig
+[    7.131127] ata_port_alloc: ENTER
+[    7.131142] ata_dev_classify: found ATA device by sig
+[    7.131146] hisi_sas_v2_hw HISI0162:01: dev[2:5] found
+[    7.136919] ata_dev_classify: found ATA device by sig
+[    7.136922] ata_port_alloc: ENTER
+[    7.136934] ata_dev_classify: found ATA device by sig
+[    7.136938] hisi_sas_v2_hw HISI0162:01: dev[4:5] found
+[    7.142677] hisi_sas_v2_hw HISI0162:01: dev[1:1] found
+[    7.142853] ata_std_sched_eh: port EH scheduled
+[    7.142856] ata_std_sched_eh: port EH scheduled
+[    7.142868] sas: Enter sas_scsi_recover_host busy: 0 failed: 0
+
+[    7.142978] sas: ata1: end_device-0:0:3: dev error handler
+[    7.142987] ata_eh_link_autopsy: ENTER
+[    7.142993] ata_eh_recover: ENTER
+[    7.143004] __ata_port_freeze: ata1 port frozen
+[    7.143009] sas: ata1: end_device-0:0:3: Unable to reset ata device?
+
+[    7.143095] sas: ata2: end_device-0:0:6: dev error handler
+[    7.143100] ata_eh_link_autopsy: ENTER
+[    7.143103] ata_eh_recover: ENTER
+[    7.143107] __ata_port_freeze: ata2 port frozen
+[    7.143110] sas: ata2: end_device-0:0:6: Unable to reset ata device?
+
+[    7.299935] ata_eh_thaw_port: ata1 port thawed
+[    7.299939] ata_std_postreset: ENTER
+[    7.299942] ata_std_postreset: EXIT
+[    7.299947] ata_eh_revalidate_and_attach: ENTER
+[    7.299953] ata1.00: ata_dev_read_id: ENTER
+[    7.299958] ata_sg_setup: ENTER, ata1
+[    7.299966] ata_sg_setup: 1 sg elements mapped
+[    7.300026] ata_eh_thaw_port: ata2 port thawed
+[    7.300028] ata_std_postreset: ENTER
+[    7.300031] ata_std_postreset: EXIT
+[    7.300034] ata_eh_revalidate_and_attach: ENTER
+[    7.300038] ata2.00: ata_dev_read_id: ENTER
+[    7.300040] ata_sg_setup: ENTER, ata2
+[    7.300046] ata_sg_setup: 1 sg elements mapped
+[    7.301498] ata_sg_clean: unmapping 1 sg elements
+[    7.301520] ata_sff_flush_pio_task: ENTER
+[    7.301527] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301534] ata1.00: ata_dev_configure: ENTER
+[    7.301595] ata_sg_clean: unmapping 1 sg elements
+[    7.301614] ata_sff_flush_pio_task: ENTER
+[    7.301620] ata2: ata_sff_flush_pio_task: EXIT
+[    7.301624] ata2.00: ata_dev_configure: ENTER
+[    7.301666] ata_sff_flush_pio_task: ENTER
+[    7.301670] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301675] ata1.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.301678] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.301681] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.301684] ata_dump_id: 88==0x407f  93==0x0000
+[    7.301691] ata1.00: ATA-8: HGST HUS724040ALA640, MFAOA8B0, max UDMA/133
+[    7.301694] ata1.00: 7814037168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[    7.301702] ata_dev_set_xfermode: set features - xfer mode
+[    7.301755] ata_sff_flush_pio_task: ENTER
+[    7.301759] ata2: ata_sff_flush_pio_task: EXIT
+[    7.301763] ata2.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.301765] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.301768] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.301771] ata_dump_id: 88==0x407f  93==0x0000
+[    7.301775] ata2.00: ATA-8: HGST HUS724040ALA640, MFAOA8B0, max UDMA/133
+[    7.301778] ata2.00: 7814037168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[    7.301783] ata_dev_set_xfermode: set features - xfer mode
+[    7.301819] ata_sff_flush_pio_task: ENTER
+[    7.301823] ata1: ata_sff_flush_pio_task: EXIT
+[    7.301826] ata_dev_set_xfermode: EXIT, err_mask=0
+[    7.301829] ata1.00: ata_dev_read_id: ENTER
+[    7.301831] ata_sg_setup: ENTER, ata1
+[    7.301838] ata_sg_setup: 1 sg elements mapped
+[    7.301903] ata_sff_flush_pio_task: ENTER
+[    7.301907] ata2: ata_sff_flush_pio_task: EXIT
+[    7.301910] ata_dev_set_xfermode: EXIT, err_mask=0
+[    7.301913] ata2.00: ata_dev_read_id: ENTER
+[    7.301915] ata_sg_setup: ENTER, ata2
+[    7.301919] ata_sg_setup: 1 sg elements mapped
+[    7.303324] ata_sg_clean: unmapping 1 sg elements
+[    7.303346] ata_sff_flush_pio_task: ENTER
+[    7.303351] ata1: ata_sff_flush_pio_task: EXIT
+[    7.303356] ata1.00: ata_dev_configure: ENTER
+[    7.303434] ata_sg_clean: unmapping 1 sg elements
+[    7.303453] ata_sff_flush_pio_task: ENTER
+[    7.303458] ata2: ata_sff_flush_pio_task: EXIT
+[    7.303462] ata2.00: ata_dev_configure: ENTER
+[    7.303472] ata_sff_flush_pio_task: ENTER
+[    7.303476] ata1: ata_sff_flush_pio_task: EXIT
+[    7.303480] ata1.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.303482] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.303485] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.303487] ata_dump_id: 88==0x407f  93==0x0000
+[    7.303492] ata_dev_set_mode: xfer_shift=12, xfer_mode=0x46
+[    7.303495] ata1.00: configured for UDMA/133
+[    7.303499] ata_eh_recover: EXIT, rc=0
+[    7.303588] ata_sff_flush_pio_task: ENTER
+[    7.303592] ata2: ata_sff_flush_pio_task: EXIT
+[    7.303595] ata2.00: ata_dev_configure: cfg 49:2f00 82:746b 83:7d69 84:4773 85:7469 86:bc41 87:4763 88:407f
+[    7.303598] ata_dump_id: 49==0x2f00  53==0x0007  63==0x0007  64==0x0003  75==0x001f  
+[    7.303600] ata_dump_id: 80==0x01fc  81==0x0029  82==0x746b  83==0x7d69  84==0x4773  
+[    7.303603] ata_dump_id: 88==0x407f  93==0x0000
+[    7.303607] ata_dev_set_mode: xfer_shift=12, xfer_mode=0x46
+[    7.303610] ata2.00: configured for UDMA/133
+[    7.303613] ata_eh_recover: EXIT, rc=0
+[    7.303626] sas: --- Exit sas_scsi_recover_host: busy: 0 failed: 0 tries: 1
+[    7.313776] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 00 00 00 24 00 00 00 00
+[    7.313782] ata_scsiop_inq_std: ENTER
+[    7.313819] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 00 00 00 60 00 00 00 00
+[    7.313822] ata_scsiop_inq_std: ENTER
+[    7.313836] scsi 0:0:0:0: Direct-Access     ATA      HGST HUS724040AL A8B0 PQ: 0 ANSI: 5
+[    7.313846] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 ff 00 00 00 00
+[    7.313860] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 80 00 ff 00 00 00 00
+[    7.313873] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 83 00 ff 00 00 00 00
+[    7.314005] ata_scsi_dump_cdb: CDB (1:0,0,0) 00 00 00 00 00 00 00 00 00
+[    7.314036] ata_scsi_dump_cdb: CDB (1:0,0,0) 9e 10 00 00 00 00 00 00 00
+[    7.314041] ata_scsiop_read_cap: ENTER
+[    7.314072] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.314101] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b0 00 40 00 00 00 00
+[    7.314127] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.314147] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b1 00 40 00 00 00 00
+[    7.314168] sd 0:0:0:0: [sda] 7814037168 512-byte logical blocks: (4.00 TB/3.64 TiB)
+[    7.314177] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 3f 00 00 00 00 00 08
+[    7.314181] ata_scsiop_mode_sense: ENTER
+[    7.314196] sd 0:0:0:0: [sda] Write Protect is off
+[    7.314201] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    7.314207] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 08
+[    7.314211] ata_scsiop_mode_sense: ENTER
+[    7.314224] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 00 00 00 24 00 00 00 00
+[    7.314229] ata_scsiop_inq_std: ENTER
+[    7.314231] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 24
+[    7.314237] ata_scsiop_mode_sense: ENTER
+[    7.314252] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 00 00 00 60 00 00 00 00
+[    7.314255] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    7.314258] ata_scsiop_inq_std: ENTER
+[    7.314264] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 12 00 00 00 00 02
+[    7.314272] scsi 0:0:1:0: Direct-Access     ATA      HGST HUS724040AL A8B0 PQ: 0 ANSI: 5
+[    7.314281] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 ff 00 00 00 00
+[    7.314284] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 93 00 00 00 00 02
+[    7.314299] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 80 00 ff 00 00 00 00
+[    7.314302] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 41 00 00 00 00 02
+[    7.314317] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 83 00 ff 00 00 00 00
+[    7.314465] ata_scsi_dump_cdb: CDB (2:0,1,0) 00 00 00 00 00 00 00 00 00
+[    7.314478] ata_scsi_dump_cdb: CDB (1:0,0,0) 00 00 00 00 00 00 00 00 00
+[    7.314485] ata_scsi_dump_cdb: CDB (2:0,1,0) 9e 10 00 00 00 00 00 00 00
+[    7.314489] ata_scsiop_read_cap: ENTER
+[    7.314497] ata_scsi_dump_cdb: CDB (1:0,0,0) 9e 10 00 00 00 00 00 00 00
+[    7.314500] ata_scsiop_read_cap: ENTER
+[    7.314511] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.314518] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.314533] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b0 00 40 00 00 00 00
+[    7.314537] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b0 00 40 00 00 00 00
+[    7.314553] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.314556] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.314574] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b1 00 40 00 00 00 00
+[    7.314575] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b1 00 40 00 00 00 00
+[    7.314592] sd 0:0:1:0: [sdb] 7814037168 512-byte logical blocks: (4.00 TB/3.64 TiB)
+[    7.314594] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 3f 00 00 00 00 00 08
+[    7.314596] ata_scsiop_mode_sense: ENTER
+[    7.314602] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 3f 00 00 00 00 00 08
+[    7.314605] ata_scsiop_mode_sense: ENTER
+[    7.314614] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 08
+[    7.314617] ata_scsiop_mode_sense: ENTER
+[    7.314620] sd 0:0:1:0: [sdb] Write Protect is off
+[    7.314624] sd 0:0:1:0: [sdb] Mode Sense: 00 3a 00 00
+[    7.314630] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 08
+[    7.314633] ata_scsiop_mode_sense: ENTER
+[    7.314650] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 24
+[    7.314654] ata_scsiop_mode_sense: ENTER
+[    7.314658] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 24
+[    7.314662] ata_scsiop_mode_sense: ENTER
+[    7.314669] sd 0:0:1:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    7.314675] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 12 00 00 00 00 02
+[    7.314680] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 12 00 00 00 00 02
+[    7.314692] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 93 00 00 00 00 02
+[    7.314698] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 93 00 00 00 00 02
+[    7.314708] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 41 00 00 00 00 02
+[    7.314717] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 41 00 00 00 00 02
+[    7.314840] ata_scsi_dump_cdb: CDB (2:0,1,0) 00 00 00 00 00 00 00 00 00
+[    7.314848] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 00 00 00 00
+[    7.314850] ata_scsi_translate: ENTER
+[    7.314854] scsi_16_lba_len: sixteen-byte command
+[    7.314858] ata_sg_setup: ENTER, ata1
+[    7.314861] ata_scsi_dump_cdb: CDB (2:0,1,0) 9e 10 00 00 00 00 00 00 00
+[    7.314864] ata_sg_setup: 1 sg elements mapped
+[    7.314865] ata_scsiop_read_cap: ENTER
+[    7.314872] ata_scsi_translate: EXIT
+[    7.314882] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.314902] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b0 00 40 00 00 00 00
+[    7.314919] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.314936] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b1 00 40 00 00 00 00
+[    7.314956] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 3f 00 00 00 00 00 08
+[    7.314959] ata_scsiop_mode_sense: ENTER
+[    7.314976] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 08
+[    7.314979] ata_scsiop_mode_sense: ENTER
+[    7.314995] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 24
+[    7.314999] ata_scsiop_mode_sense: ENTER
+[    7.315014] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 12 00 00 00 00 02
+[    7.315025] scsi 0:0:2:0: Enclosure         12G SAS  Expander         RevB PQ: 0 ANSI: 6
+[    7.315032] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 93 00 00 00 00 02
+[    7.315050] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 41 00 00 00 00 02
+[    7.315100] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 00 00 00 00
+[    7.315103] ata_scsi_translate: ENTER
+[    7.315106] scsi_16_lba_len: sixteen-byte command
+[    7.315109] ata_sg_setup: ENTER, ata2
+[    7.315114] ata_sg_setup: 1 sg elements mapped
+[    7.315126] ata_scsi_translate: EXIT
+[    7.315828] sas: DONE DISCOVERY on port 0, pid:2000, result:0
+[    7.315839] sas: phy1 matched wide port0
+[    7.315844] sas: phy-0:1 added to port-0:0, phy_mask:0x3 (500e004aaaaaaa1f)
+[    7.315856] sas: phy2 matched wide port0
+[    7.315861] sas: phy-0:2 added to port-0:0, phy_mask:0x7 (500e004aaaaaaa1f)
+[    7.315871] sas: phy3 matched wide port0
+[    7.315875] sas: phy-0:3 added to port-0:0, phy_mask:0xf (500e004aaaaaaa1f)
+[    7.315886] sas: phy4 matched wide port0
+[    7.315890] sas: phy-0:4 added to port-0:0, phy_mask:0x1f (500e004aaaaaaa1f)
+[    7.315900] sas: phy5 matched wide port0
+[    7.315905] sas: phy-0:5 added to port-0:0, phy_mask:0x3f (500e004aaaaaaa1f)
+[    7.315914] sas: phy6 matched wide port0
+[    7.315918] sas: phy-0:6 added to port-0:0, phy_mask:0x7f (500e004aaaaaaa1f)
+[    7.315928] sas: phy7 matched wide port0
+[    7.315932] sas: phy-0:7 added to port-0:0, phy_mask:0xff (500e004aaaaaaa1f)
+[    7.325799] ata_sg_clean: unmapping 1 sg elements
+[    7.325839] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 00 00 00 00
+[    7.325842] ata_scsi_translate: ENTER
+[    7.325845] scsi_16_lba_len: sixteen-byte command
+[    7.325847] ata_sg_setup: ENTER, ata1
+[    7.325852] ata_sg_setup: 1 sg elements mapped
+[    7.325858] ata_scsi_translate: EXIT
+[    7.325899] ata_sg_clean: unmapping 1 sg elements
+[    7.325922] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 00 00 00 00
+[    7.325925] ata_scsi_translate: ENTER
+[    7.325927] scsi_16_lba_len: sixteen-byte command
+[    7.325930] ata_sg_setup: ENTER, ata1
+[    7.325934] ata_sg_setup: 1 sg elements mapped
+[    7.325939] ata_scsi_translate: EXIT
+[    7.325994] ata_sg_clean: unmapping 1 sg elements
+[    7.326018] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 00 00 00 00
+[    7.326020] ata_scsi_translate: ENTER
+[    7.326022] scsi_16_lba_len: sixteen-byte command
+[    7.326024] ata_sg_setup: ENTER, ata1
+[    7.326029] ata_sg_setup: 1 sg elements mapped
+[    7.326033] ata_scsi_translate: EXIT
+[    7.326090] ata_sg_clean: unmapping 1 sg elements
+[    7.326113] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 00 00 00 00
+[    7.326116] ata_scsi_translate: ENTER
+[    7.326118] scsi_16_lba_len: sixteen-byte command
+[    7.326120] ata_sg_setup: ENTER, ata1
+[    7.326124] ata_sg_setup: 1 sg elements mapped
+[    7.326128] ata_scsi_translate: EXIT
+[    7.326187] ata_sg_clean: unmapping 1 sg elements
+[    7.326225] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 01 d1 c0 be
+[    7.326228] ata_scsi_translate: ENTER
+[    7.326230] scsi_16_lba_len: sixteen-byte command
+[    7.326232] ata_sg_setup: ENTER, ata1
+[    7.326236] ata_sg_setup: 1 sg elements mapped
+[    7.326240] ata_scsi_translate: EXIT
+[    7.328371] ata_sg_clean: unmapping 1 sg elements
+[    7.328401] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 00 00 00 00
+[    7.328404] ata_scsi_translate: ENTER
+[    7.328407] scsi_16_lba_len: sixteen-byte command
+[    7.328409] ata_sg_setup: ENTER, ata2
+[    7.328414] ata_sg_setup: 1 sg elements mapped
+[    7.328419] ata_scsi_translate: EXIT
+[    7.328466] ata_sg_clean: unmapping 1 sg elements
+[    7.328490] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 00 00 00 00
+[    7.328493] ata_scsi_translate: ENTER
+[    7.328496] scsi_16_lba_len: sixteen-byte command
+[    7.328498] ata_sg_setup: ENTER, ata2
+[    7.328503] ata_sg_setup: 1 sg elements mapped
+[    7.328507] ata_scsi_translate: EXIT
+[    7.328563] ata_sg_clean: unmapping 1 sg elements
+[    7.328585] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 00 00 00 00
+[    7.328588] ata_scsi_translate: ENTER
+[    7.328591] scsi_16_lba_len: sixteen-byte command
+[    7.328593] ata_sg_setup: ENTER, ata2
+[    7.328598] ata_sg_setup: 1 sg elements mapped
+[    7.328602] ata_scsi_translate: EXIT
+[    7.328658] ata_sg_clean: unmapping 1 sg elements
+[    7.328680] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 00 00 00 00
+[    7.328683] ata_scsi_translate: ENTER
+[    7.328685] scsi_16_lba_len: sixteen-byte command
+[    7.328687] ata_sg_setup: ENTER, ata2
+[    7.328692] ata_sg_setup: 1 sg elements mapped
+[    7.328696] ata_scsi_translate: EXIT
+[    7.328755] ata_sg_clean: unmapping 1 sg elements
+[    7.328793] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 01 d1 c0 be
+[    7.328795] ata_scsi_translate: ENTER
+[    7.328798] scsi_16_lba_len: sixteen-byte command
+[    7.328800] ata_sg_setup: ENTER, ata2
+[    7.328804] ata_sg_setup: 1 sg elements mapped
+[    7.328809] ata_scsi_translate: EXIT
+[    7.343611] ata_sg_clean: unmapping 1 sg elements
+[    7.343636] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 01 d1 c0 be
+[    7.343638] ata_scsi_translate: ENTER
+[    7.343641] scsi_16_lba_len: sixteen-byte command
+[    7.343643] ata_sg_setup: ENTER, ata1
+[    7.343648] ata_sg_setup: 1 sg elements mapped
+[    7.343652] ata_scsi_translate: EXIT
+[    7.348061] ata_sg_clean: unmapping 1 sg elements
+[    7.348085] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 01 d1 c0 be
+[    7.348088] ata_scsi_translate: ENTER
+[    7.348090] scsi_16_lba_len: sixteen-byte command
+[    7.348093] ata_sg_setup: ENTER, ata2
+[    7.348097] ata_sg_setup: 1 sg elements mapped
+[    7.348102] ata_scsi_translate: EXIT
+[    7.351785] ata_sg_clean: unmapping 1 sg elements
+[    7.351806] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 01 d1 c0 be
+[    7.351809] ata_scsi_translate: ENTER
+[    7.351811] scsi_16_lba_len: sixteen-byte command
+[    7.351813] ata_sg_setup: ENTER, ata1
+[    7.351818] ata_sg_setup: 1 sg elements mapped
+[    7.351822] ata_scsi_translate: EXIT
+[    7.351881] ata_sg_clean: unmapping 1 sg elements
+[    7.351904] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 01 d1 c0 be
+[    7.351906] ata_scsi_translate: ENTER
+[    7.351908] scsi_16_lba_len: sixteen-byte command
+[    7.351911] ata_sg_setup: ENTER, ata1
+[    7.351915] ata_sg_setup: 1 sg elements mapped
+[    7.351919] ata_scsi_translate: EXIT
+[    7.351977] ata_sg_clean: unmapping 1 sg elements
+[    7.352000] ata_scsi_dump_cdb: CDB (1:0,0,0) 88 00 00 00 00 01 d1 c0 be
+[    7.352002] ata_scsi_translate: ENTER
+[    7.352005] scsi_16_lba_len: sixteen-byte command
+[    7.352006] ata_sg_setup: ENTER, ata1
+[    7.352011] ata_sg_setup: 1 sg elements mapped
+[    7.352015] ata_scsi_translate: EXIT
+[    7.352073] ata_sg_clean: unmapping 1 sg elements
+[    7.352116]  sda: sda1 sda2 sda3
+[    7.352395] ata_scsi_dump_cdb: CDB (1:0,0,0) 00 00 00 00 00 00 00 00 00
+[    7.352402] ata_scsi_dump_cdb: CDB (1:0,0,0) 00 00 00 00 00 00 00 00 00
+[    7.352422] ata_scsi_dump_cdb: CDB (1:0,0,0) 9e 10 00 00 00 00 00 00 00
+[    7.352426] ata_scsiop_read_cap: ENTER
+[    7.352446] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.352465] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b0 00 40 00 00 00 00
+[    7.352484] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 00 00 40 00 00 00 00
+[    7.352503] ata_scsi_dump_cdb: CDB (1:0,0,0) 12 01 b1 00 40 00 00 00 00
+[    7.352523] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 3f 00 00 00 00 00 08
+[    7.352526] ata_scsiop_mode_sense: ENTER
+[    7.352543] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 08
+[    7.352547] ata_scsiop_mode_sense: ENTER
+[    7.352564] ata_scsi_dump_cdb: CDB (1:0,0,0) 5a 00 08 00 00 00 00 00 24
+[    7.352567] ata_scsiop_mode_sense: ENTER
+[    7.352584] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 12 00 00 00 00 02
+[    7.352601] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 93 00 00 00 00 02
+[    7.352617] ata_scsi_dump_cdb: CDB (1:0,0,0) a3 0c 01 41 00 00 00 00 02
+[    7.352633] sd 0:0:0:0: [sda] Attached SCSI disk
+[    7.356230] ata_sg_clean: unmapping 1 sg elements
+[    7.356256] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 01 d1 c0 be
+[    7.356259] ata_scsi_translate: ENTER
+[    7.356262] scsi_16_lba_len: sixteen-byte command
+[    7.356264] ata_sg_setup: ENTER, ata2
+[    7.356270] ata_sg_setup: 1 sg elements mapped
+[    7.356275] ata_scsi_translate: EXIT
+[    7.356326] ata_sg_clean: unmapping 1 sg elements
+[    7.356351] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 01 d1 c0 be
+[    7.356353] ata_scsi_translate: ENTER
+[    7.356356] scsi_16_lba_len: sixteen-byte command
+[    7.356358] ata_sg_setup: ENTER, ata2
+[    7.356363] ata_sg_setup: 1 sg elements mapped
+[    7.356367] ata_scsi_translate: EXIT
+[    7.356422] ata_sg_clean: unmapping 1 sg elements
+[    7.356446] ata_scsi_dump_cdb: CDB (2:0,1,0) 88 00 00 00 00 01 d1 c0 be
+[    7.356448] ata_scsi_translate: ENTER
+[    7.356451] scsi_16_lba_len: sixteen-byte command
+[    7.356453] ata_sg_setup: ENTER, ata2
+[    7.356458] ata_sg_setup: 1 sg elements mapped
+[    7.356462] ata_scsi_translate: EXIT
+[    7.356518] ata_sg_clean: unmapping 1 sg elements
+[    7.356563]  sdb: sdb1 sdb2 sdb3
+[    7.356815] ata_scsi_dump_cdb: CDB (2:0,1,0) 00 00 00 00 00 00 00 00 00
+[    7.356821] ata_scsi_dump_cdb: CDB (2:0,1,0) 00 00 00 00 00 00 00 00 00
+[    7.356843] ata_scsi_dump_cdb: CDB (2:0,1,0) 9e 10 00 00 00 00 00 00 00
+[    7.356846] ata_scsiop_read_cap: ENTER
+[    7.356865] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.356883] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b0 00 40 00 00 00 00
+[    7.356903] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 00 00 40 00 00 00 00
+[    7.356921] ata_scsi_dump_cdb: CDB (2:0,1,0) 12 01 b1 00 40 00 00 00 00
+[    7.356940] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 3f 00 00 00 00 00 08
+[    7.356943] ata_scsiop_mode_sense: ENTER
+[    7.356960] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 08
+[    7.356963] ata_scsiop_mode_sense: ENTER
+[    7.356980] ata_scsi_dump_cdb: CDB (2:0,1,0) 5a 00 08 00 00 00 00 00 24
+[    7.356983] ata_scsiop_mode_sense: ENTER
+[    7.356999] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 12 00 00 00 00 02
+[    7.357016] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 93 00 00 00 00 02
+[    7.357032] ata_scsi_dump_cdb: CDB (2:0,1,0) a3 0c 01 41 00 00 00 00 02
+[    7.357047] sd 0:0:1:0: [sdb] Attached SCSI disk
+[    7.628561] libphy: Fixed MDIO Bus: probed
+[    7.628873] tun: Universal TUN/TAP device driver, 1.6
+[    7.707676] libphy: Hisilicon MII Bus: probed
+[    7.821161] hns_dsaf HISI00B2:00: no mc-mac-mask property, set to default value.
+[    8.021608] hns_dsaf HISI00B2:00: no mc-mac-mask property, set to default value.
+[    8.236211] hns_dsaf HISI00B2:00: no mc-mac-mask property, set to default value.
+[    8.258806] hns_dsaf HISI00B2:00: no mc-mac-mask property, set to default value.
+[    8.533181] DMA-API: debugging out of memory - disabling
+[    8.607936] netif_napi_add() called with weight 256 on device eth%d
+[    8.695251] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    8.695254] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    8.695287] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    8.695290] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    8.695310] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    8.695313] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    8.695332] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver - version 5.1.0-k
+[    8.695334] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    8.695432] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver - version 4.1.0-k
+[    8.695436] ixgbevf: Copyright (c) 2009 - 2015 Intel Corporation.
+[    8.695593] sky2: driver version 1.30
+[    8.695964] QLogic 1/10 GbE Converged/Intelligent Ethernet Driver v5.3.66
+[    8.696002] QLogic/NetXen Network Driver v4.0.82
+[    8.696025] QLogic FastLinQ 4xxxx Core Module qed 8.10.11.21
+[    8.696028] qede_init: QLogic FastLinQ 4xxxx Ethernet Driver qede 8.10.10.21
+[    8.696028] 
+[    8.696195] VFIO - User Level meta-driver version: 0.3
+[    8.696585] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    8.696588] ehci-pci: EHCI PCI platform driver
+[    8.696605] ehci-platform: EHCI generic platform driver
+[    8.696723] ehci-platform PNP0D20:00: EHCI Host Controller
+[    8.696733] ehci-platform PNP0D20:00: new USB bus registered, assigned bus number 1
+[    8.696778] ehci-platform PNP0D20:00: irq 361, io mem 0xa7020000
+[    8.711677] ehci-platform PNP0D20:00: USB 2.0 started, EHCI 1.00
+[    8.711915] hub 1-0:1.0: USB hub found
+[    8.711927] hub 1-0:1.0: 2 ports detected
+[    8.712120] ehci-orion: EHCI orion driver
+[    8.712155] ehci-exynos: EHCI EXYNOS driver
+[    8.712180] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    8.712212] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    8.712221] ohci-pci: OHCI PCI platform driver
+[    8.712245] ohci-platform: OHCI generic platform driver
+[    8.712271] ohci-exynos: OHCI EXYNOS driver
+[    8.712385] usbcore: registered new interface driver usb-storage
+[    8.838853] rtc-efi rtc-efi: rtc core: registered rtc-efi as rtc0
+[    8.839032] i2c /dev entries driver
+[    8.839785] sdhci: Secure Digital Host Controller Interface driver
+[    8.839789] sdhci: Copyright(c) Pierre Ossman
+[    8.839858] Synopsys Designware Multimedia Card Interface Driver
+[    8.840020] sdhci-pltfm: SDHCI platform and OF driver helper
+[    8.841409] ledtrig-cpu: registered to indicate activity on CPUs
+[    9.044090] usbcore: registered new interface driver usbhid
+[    9.044093] usbhid: USB HID core driver
+[    9.044962] NET: Registered protocol family 10
+[    9.045567] Segment Routing with IPv6
+[    9.045589] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    9.045756] NET: Registered protocol family 17
+[    9.046255] RPC: Registered rdma transport module.
+[    9.046258] RPC: Registered rdma backchannel transport module.
+[    9.046270] 9pnet: Installing 9P2000 support
+[    9.046292] Key type dns_resolver registered
+[    9.046525] registered taskstats version 1
+[    9.046863] ARMH0011:00: ttyAMA0 at MMIO 0x602b0000 (irq = 396, base_baud = 0) is a SBSA
+[    9.047678] usb 1-1: new high-speed USB device number 2 using ehci-platform
+[    9.208211] hub 1-1:1.0: USB hub found
+[    9.208296] hub 1-1:1.0: 4 ports detected
+[    9.343670] usb 1-2: new high-speed USB device number 3 using ehci-platform
+[    9.500203] hub 1-2:1.0: USB hub found
+[    9.500296] hub 1-2:1.0: 4 ports detected
+[    9.795672] usb 1-2.1: new full-speed USB device number 4 using ehci-platform
+[    9.908044] input: Keyboard/Mouse KVM 1.1.0 as /devices/platform/PNP0D20:00/usb1/1-2/1-2.1/1-2.1:1.0/0003:12D1:0003.0001/input/input1
+[    9.967853] hid-generic 0003:12D1:0003.0001: input: USB HID v1.10 Keyboard [Keyboard/Mouse KVM 1.1.0] on usb-PNP0D20:00-2.1/input0
+[    9.968958] input: Keyboard/Mouse KVM 1.1.0 as /devices/platform/PNP0D20:00/usb1/1-2/1-2.1/1-2.1:1.1/0003:12D1:0003.0002/input/input2
+[    9.969001] hid-generic 0003:12D1:0003.0002: input: USB HID v1.10 Mouse [Keyboard/Mouse KVM 1.1.0] on usb-PNP0D20:00-2.1/input1
+[   16.671452] console [ttyAMA0] enabled
+[   16.741017] rtc-efi rtc-efi: setting system clock to 2017-11-23 02:30:30 UTC (1511404230)
+[   16.859785] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   16.971782] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   17.083780] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+[   17.195776] IPv6: ADDRCONF(NETDEV_UP): eth3: link is not ready
+[   18.215770] hns-nic HISI00C2:03 eth3: link up
+[   18.220280] IPv6: ADDRCONF(NETDEV_CHANGE): eth3: link becomes ready
+[   18.239671] Sending DHCP requests .
+[   20.007842] hns-nic HISI00C2:00 eth0: link up
+[   20.015678] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   20.887669] ..., OK
+[   34.641788] IP-Config: Got DHCP answer from 192.168.1.107, my address is 192.168.1.124
+[   34.649698] IP-Config: Complete:
+[   34.652922]      device=eth0, hwaddr=c0:a8:02:b7:00:04, ipaddr=192.168.1.124, mask=255.255.255.0, gw=192.168.1.2
+[   34.663088]      host=192.168.1.124, domain=, nis-domain=(none)
+[   34.668998]      bootserver=192.168.1.107, rootserver=192.168.1.107, rootpath=     nameserver0=192.168.1.107
+[   34.835861] ALSA device list:
+[   34.838817]   No soundcards found.
+[   34.842738] Freeing unused kernel memory: 1152K
